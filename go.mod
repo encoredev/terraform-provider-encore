@@ -1,4 +1,4 @@
-module github.com/hashicorp/terraform-provider-scaffolding-framework
+module github.com/encoredev/terraform-provider-encore
 
 go 1.20
 
