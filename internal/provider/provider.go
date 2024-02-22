@@ -1,13 +1,11 @@
-// Copyright (c) HashiCorp, Inc.
-// SPDX-License-Identifier: MPL-2.0
-
 package provider
 
 import (
 	"context"
-	"net/http"
+	"os"
 
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
+	"github.com/hashicorp/terraform-plugin-framework/path"
 	"github.com/hashicorp/terraform-plugin-framework/provider"
 	"github.com/hashicorp/terraform-plugin-framework/provider/schema"
 	"github.com/hashicorp/terraform-plugin-framework/resource"
@@ -28,8 +26,7 @@ type EncoreProvider struct {
 // EncoreProviderModel describes the provider data model.
 type EncoreProviderModel struct {
 	APIKey  types.String `tfsdk:"api_key"`
-	AppID   types.String `tfsdk:"app_id"`
-	EnvName types.String `tfsdk:"env_name"`
+	EnvName types.String `tfsdk:"env"`
 }
 
 func (p *EncoreProvider) Metadata(ctx context.Context, req provider.MetadataRequest, resp *provider.MetadataResponse) {
@@ -40,16 +37,12 @@ func (p *EncoreProvider) Metadata(ctx context.Context, req provider.MetadataRequ
 func (p *EncoreProvider) Schema(ctx context.Context, req provider.SchemaRequest, resp *provider.SchemaResponse) {
 	resp.Schema = schema.Schema{
 		Attributes: map[string]schema.Attribute{
-			"api_key": schema.StringAttribute{
-				MarkdownDescription: "The API key to use to authenticate with the Encore Platform. If empty, the provider attempts to use the local Encore CLI for authentication.",
-				Optional:            true,
-			},
-			"app_id": schema.StringAttribute{
-				MarkdownDescription: "The default Encore application id to operate on, if not overridden on a resource.",
-				Optional:            true,
-			},
-			"env_name": schema.StringAttribute{
+			"env": schema.StringAttribute{
 				MarkdownDescription: "The default Encore environment to operate on, if not overridden on a resource.",
+				Optional:            true,
+			},
+			"api_key": schema.StringAttribute{
+				MarkdownDescription: "The API key to use to authenticate with the Encore Platform. If empty, the provider attempts to use ENCORE_API_KEY env.",
 				Optional:            true,
 			},
 		},
@@ -60,18 +53,30 @@ func (p *EncoreProvider) Configure(ctx context.Context, req provider.ConfigureRe
 	var data EncoreProviderModel
 
 	resp.Diagnostics.Append(req.Config.Get(ctx, &data)...)
-
 	if resp.Diagnostics.HasError() {
 		return
 	}
 
-	// Configuration values are now available.
-	// if data.Endpoint.IsNull() { /* ... */ }
+	client := NewPlatformClient(p.version)
 
-	// Example client configuration for data sources and resources
-	client := http.DefaultClient
-	resp.DataSourceData = client
-	resp.ResourceData = client
+	apiKey := data.APIKey.ValueString()
+	if apiKey == "" {
+		apiKey = os.Getenv("ENCORE_API_KEY")
+	}
+
+	if apiKey == "" {
+		resp.Diagnostics.AddAttributeError(path.Root("api_key"), "missing key", "missing encore api key")
+		return
+	}
+
+	err := client.Auth(ctx, apiKey)
+	if err != nil {
+		resp.Diagnostics.AddAttributeError(path.Root("api_key"), "invalid key", "encore platform auth failed")
+		return
+	}
+	needs := NewNeedsData(client, data.EnvName.ValueString(), p.DataSources(ctx))
+	resp.DataSourceData = needs
+	resp.ResourceData = needs
 }
 
 func (p *EncoreProvider) Resources(ctx context.Context) []func() resource.Resource {
@@ -81,6 +86,7 @@ func (p *EncoreProvider) Resources(ctx context.Context) []func() resource.Resour
 func (p *EncoreProvider) DataSources(ctx context.Context) []func() datasource.DataSource {
 	return []func() datasource.DataSource{
 		NewPubSubTopic,
+		NewPubSubSubscription,
 	}
 }
 

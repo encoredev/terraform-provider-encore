@@ -8,8 +8,9 @@ import (
 	"flag"
 	"log"
 
-	"github.com/encoredev/terraform-provider-encore/internal/provider"
 	"github.com/hashicorp/terraform-plugin-framework/providerserver"
+
+	"github.com/encoredev/terraform-provider-encore/internal/provider"
 )
 
 // Run "go generate" to format example terraform files and generate the docs for the registry/website
@@ -39,7 +40,7 @@ func main() {
 
 	opts := providerserver.ServeOpts{
 		// TODO: Update this string with the published name of your provider.
-		Address: "registry.terraform.io/encore/encore",
+		Address: "registry.terraform.io/encoredev/encore",
 		Debug:   debug,
 	}
 

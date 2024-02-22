@@ -1,3 +1,4 @@
-provider "scaffolding" {
-  # example configuration here
+provider "encore" {
+  env     = "aws"
+  api_key = "api_key"
 }
