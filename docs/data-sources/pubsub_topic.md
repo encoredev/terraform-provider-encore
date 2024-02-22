@@ -13,21 +13,21 @@ Data source that provides information about an Encore-managed resource
 ## Example Usage
 
 ```terraform
-data "encore_pubsub_topic" "aws" {
+data "encore_pubsub_topic" "test_topic" {
   name = "test"
 }
 
-data "encore_pubsub_topic" "gcp" {
+data "encore_pubsub_topic" "other_topic" {
   name = "test"
   env  = "gcp"
 }
 
 output "aws_topic" {
-  value = data.encore_pubsub_topic.aws.name
+  value = data.encore_pubsub_topic.test_topic.aws_sns.arn
 }
 
 output "gcp_topic" {
-  value = data.encore_pubsub_topic.gcp.gcp_pubsub.self_link
+  value = data.encore_pubsub_topic.other_topic.gcp_pubsub.relative_resource_name
 }
 ```
 
@@ -36,20 +36,20 @@ output "gcp_topic" {
 
 ### Required
 
-- `name` (String)
+- `name` (String) The name of the Encore resource
 
 ### Optional
 
-- `aws_sns` (Attributes) SNS Topic information (see [below for nested schema](#nestedatt--aws_sns))
-- `env` (String)
-- `gcp_pubsub` (Attributes) GCP Pubsub Topic information (see [below for nested schema](#nestedatt--gcp_pubsub))
+- `aws_sns` (Attributes) Encore provisioned SNS Topic information (see [below for nested schema](#nestedatt--aws_sns))
+- `env` (String) The environment of the Encore resource. Defaults to the provider environment
+- `gcp_pubsub` (Attributes) Encore provisioned GCP Pubsub Topic information (see [below for nested schema](#nestedatt--gcp_pubsub))
 
 <a id="nestedatt--aws_sns"></a>
 ### Nested Schema for `aws_sns`
 
 Read-Only:
 
-- `arn` (String) The ARN for this  sns topic
+- `arn` (String) The [ARN](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html) for this  sns topic
 
 
 <a id="nestedatt--gcp_pubsub"></a>
@@ -57,4 +57,4 @@ Read-Only:
 
 Read-Only:
 
-- `self_link` (String) The GCP self link to the topic
+- `relative_resource_name` (String) The [relative resource name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) for this Pubsub topic

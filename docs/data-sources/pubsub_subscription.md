@@ -13,21 +13,21 @@ Data source that provides information about an Encore-managed resource
 ## Example Usage
 
 ```terraform
-data "encore_pubsub_subscription" "aws" {
+data "encore_pubsub_subscription" "test_sub" {
   name = "test"
 }
 
-data "encore_pubsub_subscription" "gcp" {
+data "encore_pubsub_subscription" "other_sub" {
   name = "test"
   env  = "gcp"
 }
 
 output "aws_sub" {
-  value = data.encore_pubsub_subscription.aws.name
+  value = data.encore_pubsub_subscription.test_sub.aws_sqs.arn
 }
 
 output "gcp_sub" {
-  value = data.encore_pubsub_subscription.gcp.gcp_pubsub.self_link
+  value = data.encore_pubsub_subscription.other_sub.gcp_pubsub.relative_resource_name
 }
 ```
 
@@ -36,20 +36,20 @@ output "gcp_sub" {
 
 ### Required
 
-- `name` (String)
+- `name` (String) The name of the Encore resource
 
 ### Optional
 
-- `aws_sqs` (Attributes) SQS Queue information (see [below for nested schema](#nestedatt--aws_sqs))
-- `env` (String)
-- `gcp_pubsub` (Attributes) SQS Queue information (see [below for nested schema](#nestedatt--gcp_pubsub))
+- `aws_sqs` (Attributes) Encore provisioned SQS Queue information (see [below for nested schema](#nestedatt--aws_sqs))
+- `env` (String) The environment of the Encore resource. Defaults to the provider environment
+- `gcp_pubsub` (Attributes) Encore provisioned PubSub Subscription information (see [below for nested schema](#nestedatt--gcp_pubsub))
 
 <a id="nestedatt--aws_sqs"></a>
 ### Nested Schema for `aws_sqs`
 
 Read-Only:
 
-- `arn` (String) The ARN for this sqs queue
+- `arn` (String) The [ARN](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html) for this sqs queue
 
 
 <a id="nestedatt--gcp_pubsub"></a>
@@ -57,4 +57,4 @@ Read-Only:
 
 Read-Only:
 
-- `self_link` (String) The GCP self link to the topic
+- `relative_resource_name` (String) The [relative resource name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) for this PubSub subscription

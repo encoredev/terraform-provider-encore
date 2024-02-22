@@ -147,6 +147,9 @@ type Need struct {
 }
 
 func NewNeedsData(client *PlatformClient, envName string, ds []func() datasource.DataSource) *NeedsData {
+	if envName == "" {
+		envName = "@primary"
+	}
 	n := &NeedsData{
 		client:     client,
 		needs:      map[string]map[TypeRef]map[string]*Need{},
@@ -174,10 +177,12 @@ func createSchema(tfTypes ...TFType) schema.Schema {
 		MarkdownDescription: "Data source that provides information about an Encore-managed resource",
 		Attributes: map[string]schema.Attribute{
 			"name": schema.StringAttribute{
-				Required: true,
+				MarkdownDescription: "The name of the Encore resource",
+				Required:            true,
 			},
 			"env": schema.StringAttribute{
-				Optional: true,
+				Optional:            true,
+				MarkdownDescription: "The environment of the Encore resource. Defaults to the provider environment",
 			},
 		},
 	}
@@ -200,6 +205,13 @@ func (s *NeedsData) SetValue(ctx context.Context, typRef TypeRef, reqCfg tfsdk.C
 	if envName.ValueString() == "" {
 		envName = types.StringValue(s.defaultEnv)
 	}
+	diags.Append(state.SetAttribute(ctx, path.Root("name"), encoreName)...)
+	diags.Append(state.SetAttribute(ctx, path.Root("env"), envName)...)
+
+	if diags.HasError() {
+		return diags
+	}
+
 	n, diags := s.Get(ctx, typRef, envName.ValueString(), encoreName.ValueString())
 	if diags.HasError() {
 		return diags
@@ -219,10 +231,7 @@ func (s *NeedsData) SetValue(ctx context.Context, typRef TypeRef, reqCfg tfsdk.C
 	if diags.HasError() {
 		return diags
 	}
-	state.SetAttribute(ctx, path.Root("name"), encoreName)
-	state.SetAttribute(ctx, path.Root("env"), envName)
-	state.SetAttribute(ctx, path.Root(key), value)
-	return diags
+	return state.SetAttribute(ctx, path.Root(key), value)
 }
 
 func (n *NeedsData) Get(ctx context.Context, typRef TypeRef, envName, encoreName string) (*Need, diag.Diagnostics) {

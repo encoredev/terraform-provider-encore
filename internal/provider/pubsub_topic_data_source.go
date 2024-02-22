@@ -18,20 +18,20 @@ type AWSSNSTopic struct {
 
 func (a *AWSSNSTopic) GetDocs() (subkey string, mdDesc string, attrDesc map[string]string) {
 	return "aws_sns",
-		"SNS Topic information",
+		"Encore provisioned SNS Topic information",
 		map[string]string{
-			"arn": "The ARN for this  sns topic",
+			"arn": "The [ARN](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html) for this  sns topic",
 		}
 }
 
 type GCPPubSubTopic struct {
-	SelfLink string
+	SelfLink string `tfsdk:"relative_resource_name"`
 }
 
 func (a *GCPPubSubTopic) GetDocs() (subkey string, mdDesc string, attrDesc map[string]string) {
 	return "gcp_pubsub",
-		"GCP Pubsub Topic information",
+		"Encore provisioned GCP Pubsub Topic information",
 		map[string]string{
-			"self_link": "The GCP self link to the topic",
+			"relative_resource_name": "The [relative resource name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) for this Pubsub topic",
 		}
 }

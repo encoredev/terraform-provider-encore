@@ -1,4 +1,4 @@
 provider "encore" {
-  env     = "aws"
-  api_key = "api_key"
+  env      = "aws"
+  auth_key = "auth_key"
 }

@@ -25,7 +25,7 @@ type EncoreProvider struct {
 
 // EncoreProviderModel describes the provider data model.
 type EncoreProviderModel struct {
-	APIKey  types.String `tfsdk:"api_key"`
+	APIKey  types.String `tfsdk:"auth_key"`
 	EnvName types.String `tfsdk:"env"`
 }
 
@@ -38,11 +38,11 @@ func (p *EncoreProvider) Schema(ctx context.Context, req provider.SchemaRequest,
 	resp.Schema = schema.Schema{
 		Attributes: map[string]schema.Attribute{
 			"env": schema.StringAttribute{
-				MarkdownDescription: "The default Encore environment to operate on, if not overridden on a resource.",
+				MarkdownDescription: "The default Encore environment to operate on, if not overridden on a resource. Defaults to primary environment.",
 				Optional:            true,
 			},
-			"api_key": schema.StringAttribute{
-				MarkdownDescription: "The API key to use to authenticate with the Encore Platform. If empty, the provider attempts to use ENCORE_API_KEY env.",
+			"auth_key": schema.StringAttribute{
+				MarkdownDescription: "The [Encore Auth Key](https://encore.dev/docs/develop/auth-keys) to use to authenticate with the Encore Platform. Defaults to `ENCORE_AUTH_KEY` env var.",
 				Optional:            true,
 			},
 		},
@@ -61,17 +61,17 @@ func (p *EncoreProvider) Configure(ctx context.Context, req provider.ConfigureRe
 
 	apiKey := data.APIKey.ValueString()
 	if apiKey == "" {
-		apiKey = os.Getenv("ENCORE_API_KEY")
+		apiKey = os.Getenv("ENCORE_AUTH_KEY")
 	}
 
 	if apiKey == "" {
-		resp.Diagnostics.AddAttributeError(path.Root("api_key"), "missing key", "missing encore api key")
+		resp.Diagnostics.AddAttributeError(path.Root("auth_key"), "missing key", "missing encore auth key")
 		return
 	}
 
 	err := client.Auth(ctx, apiKey)
 	if err != nil {
-		resp.Diagnostics.AddAttributeError(path.Root("api_key"), "invalid key", "encore platform auth failed")
+		resp.Diagnostics.AddAttributeError(path.Root("auth_key"), "invalid key", "encore platform auth failed")
 		return
 	}
 	needs := NewNeedsData(client, data.EnvName.ValueString(), p.DataSources(ctx))
