@@ -14,8 +14,8 @@ description: |-
 
 ```terraform
 provider "encore" {
-  env     = "aws"
-  api_key = "api_key"
+  env      = "aws"
+  auth_key = "auth_key"
 }
 ```
 
@@ -24,5 +24,5 @@ provider "encore" {
 
 ### Optional
 
-- `api_key` (String) The API key to use to authenticate with the Encore Platform. If empty, the provider attempts to use ENCORE_API_KEY env.
-- `env` (String) The default Encore environment to operate on, if not overridden on a resource.
+- `auth_key` (String) The [Encore Auth Key](https://encore.dev/docs/develop/auth-keys) to use to authenticate with the Encore Platform. Defaults to `ENCORE_AUTH_KEY` env var.
+- `env` (String) The default Encore environment to operate on, if not overridden on a resource. Defaults to primary environment.

@@ -14,7 +14,7 @@ func TestAccExampleDataSource(t *testing.T) {
 			{
 				Config: testAccExampleDataSourceConfig,
 				Check: resource.ComposeAggregateTestCheckFunc(
-					resource.TestCheckResourceAttr("data.encore_pubsub_topic.test", "env", "encorecloud-test"),
+					resource.TestCheckResourceAttr("data.encore_pubsub_topic.test", "env", "@primary"),
 				),
 			},
 		},
@@ -22,12 +22,9 @@ func TestAccExampleDataSource(t *testing.T) {
 }
 
 const testAccExampleDataSourceConfig = `
-provider "encore" {
-  env = "encorecloud-test"
-}
+provider "encore" {}
 
 data "encore_pubsub_topic" "test" {
     name = "ordered"
-	env = "encorecloud-test"
 }
 `

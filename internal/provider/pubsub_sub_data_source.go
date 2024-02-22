@@ -18,20 +18,20 @@ type AWSSQSQueue struct {
 
 func (a *AWSSQSQueue) GetDocs() (subkey string, mdDesc string, attrDesc map[string]string) {
 	return "aws_sqs",
-		"SQS Queue information",
+		"Encore provisioned SQS Queue information",
 		map[string]string{
-			"arn": "The ARN for this sqs queue",
+			"arn": "The [ARN](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html) for this sqs queue",
 		}
 }
 
 type GCPPubSubSubscription struct {
-	SelfLink string
+	SelfLink string `tfsdk:"relative_resource_name"`
 }
 
 func (a *GCPPubSubSubscription) GetDocs() (subkey string, mdDesc string, attrDesc map[string]string) {
 	return "gcp_pubsub",
-		"SQS Queue information",
+		"Encore provisioned PubSub Subscription information",
 		map[string]string{
-			"self_link": "The GCP self link to the topic",
+			"relative_resource_name": "The [relative resource name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) for this PubSub subscription",
 		}
 }
