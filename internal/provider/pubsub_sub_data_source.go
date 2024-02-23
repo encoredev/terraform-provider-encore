@@ -25,13 +25,13 @@ func (a *AWSSQSQueue) GetDocs() (subkey string, mdDesc string, attrDesc map[stri
 }
 
 type GCPPubSubSubscription struct {
-	SelfLink string `tfsdk:"relative_resource_name"`
+	SelfLink string `tfsdk:"id"`
 }
 
 func (a *GCPPubSubSubscription) GetDocs() (subkey string, mdDesc string, attrDesc map[string]string) {
 	return "gcp_pubsub",
 		"Encore provisioned PubSub Subscription information",
 		map[string]string{
-			"relative_resource_name": "The [relative resource name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) for this PubSub subscription",
+			"id": "The [relative resource name](https://cloud.google.com/apis/design/resource_names#id) for this PubSub subscription in the form of `projects/{project}/subscriptions/{subscription}`",
 		}
 }

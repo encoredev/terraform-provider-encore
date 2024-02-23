@@ -1,16 +1,12 @@
-data "encore_pubsub_topic" "test_topic" {
+data "encore_pubsub_topic" "aws" {
   name = "test"
+  env  = "aws"
 }
 
-data "encore_pubsub_topic" "other_topic" {
-  name = "test"
-  env  = "gcp"
-}
-
-output "aws_topic" {
-  value = data.encore_pubsub_topic.test_topic.aws_sns.arn
-}
-
-output "gcp_topic" {
-  value = data.encore_pubsub_topic.other_topic.gcp_pubsub.relative_resource_name
+data "aws_iam_policy_document" "mypolicy" {
+  statement {
+    effect    = "Allow"
+    actions   = ["sns:Publish"]
+    resources = [data.encore_pubsub_topic.aws.aws_sns.arn]
+  }
 }

@@ -1,16 +1,15 @@
-data "encore_pubsub_subscription" "test_sub" {
+data "encore_pubsub_subscription" "aws" {
   name = "test"
+  env  = "aws"
 }
 
-data "encore_pubsub_subscription" "other_sub" {
-  name = "test"
-  env  = "gcp"
-}
-
-output "aws_sub" {
-  value = data.encore_pubsub_subscription.test_sub.aws_sqs.arn
-}
-
-output "gcp_sub" {
-  value = data.encore_pubsub_subscription.other_sub.gcp_pubsub.relative_resource_name
+data "aws_iam_policy_document" "mypolicy" {
+  statement {
+    effect = "Allow"
+    actions = ["sqs:ReceiveMessage",
+      "sqs:DeleteMessage",
+      "sqs:GetQueueAttributes",
+    "sqs:ChangeMessageVisibility"]
+    resources = [data.encore_pubsub_topic.aws.aws_sqs.arn]
+  }
 }

@@ -25,13 +25,13 @@ func (a *AWSSNSTopic) GetDocs() (subkey string, mdDesc string, attrDesc map[stri
 }
 
 type GCPPubSubTopic struct {
-	SelfLink string `tfsdk:"relative_resource_name"`
+	SelfLink string `tfsdk:"id"`
 }
 
 func (a *GCPPubSubTopic) GetDocs() (subkey string, mdDesc string, attrDesc map[string]string) {
 	return "gcp_pubsub",
 		"Encore provisioned GCP Pubsub Topic information",
 		map[string]string{
-			"relative_resource_name": "The [relative resource name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) for this Pubsub topic",
+			"id": "The [relative resource name](https://cloud.google.com/apis/design/resource_names#id) for this Pubsub topic in the form of `projects/{project}/topics/{topic}`",
 		}
 }

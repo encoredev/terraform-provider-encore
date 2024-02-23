@@ -13,21 +13,17 @@ Data source that provides information about an Encore-managed resource
 ## Example Usage
 
 ```terraform
-data "encore_pubsub_topic" "test_topic" {
+data "encore_pubsub_topic" "aws" {
   name = "test"
+  env  = "aws"
 }
 
-data "encore_pubsub_topic" "other_topic" {
-  name = "test"
-  env  = "gcp"
-}
-
-output "aws_topic" {
-  value = data.encore_pubsub_topic.test_topic.aws_sns.arn
-}
-
-output "gcp_topic" {
-  value = data.encore_pubsub_topic.other_topic.gcp_pubsub.relative_resource_name
+data "aws_iam_policy_document" "mypolicy" {
+  statement {
+    effect    = "Allow"
+    actions   = ["sns:Publish"]
+    resources = [data.encore_pubsub_topic.aws.aws_sns.arn]
+  }
 }
 ```
 
@@ -57,4 +53,4 @@ Read-Only:
 
 Read-Only:
 
-- `relative_resource_name` (String) The [relative resource name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) for this Pubsub topic
+- `id` (String) The [relative resource name](https://cloud.google.com/apis/design/resource_names#id) for this Pubsub topic in the form of `projects/{project}/topics/{topic}`

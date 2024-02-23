@@ -65,13 +65,13 @@ func (p *EncoreProvider) Configure(ctx context.Context, req provider.ConfigureRe
 	}
 
 	if apiKey == "" {
-		resp.Diagnostics.AddAttributeError(path.Root("auth_key"), "missing key", "missing encore auth key")
+		resp.Diagnostics.AddAttributeError(path.Root("auth_key"), "No valid credential sources found", "Failed to find auth key in configuration or environment variables")
 		return
 	}
 
 	err := client.Auth(ctx, apiKey)
 	if err != nil {
-		resp.Diagnostics.AddAttributeError(path.Root("auth_key"), "invalid key", "encore platform auth failed")
+		resp.Diagnostics.AddAttributeError(path.Root("auth_key"), "No valid credential sources found", "Failed to authenticate with the Encore Platform: "+err.Error())
 		return
 	}
 	needs := NewNeedsData(client, data.EnvName.ValueString(), p.DataSources(ctx))
