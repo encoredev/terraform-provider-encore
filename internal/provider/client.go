@@ -73,7 +73,7 @@ func (p *PlatformClient) Auth(ctx context.Context, authKey string) error {
 	}
 	p.appSlug = data.AppSlug
 	p.http = oauth2.NewClient(ctx, cfg.TokenSource(ctx, data.Token))
-	p.gql = graphql.NewClient(p.baseURL+"/graphql", p.http)
+	p.gql = graphql.NewClient(p.baseURL+"/graphql", p.http).WithDebug(true)
 	return nil
 }
 

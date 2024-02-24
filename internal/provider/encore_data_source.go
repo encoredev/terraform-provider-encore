@@ -3,28 +3,37 @@ package provider
 import (
 	"context"
 	"fmt"
+	"reflect"
 
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 	"github.com/hashicorp/terraform-plugin-framework/datasource/schema"
 )
 
-type Satisfier struct {
+var queryType = reflect.TypeOf((*SatisfierQuery)(nil)).Elem()
+
+type SatisfierQuery struct {
 	Type string `graphql:"__typename"`
 
-	AWSSQSQueue           `graphql:"... on AWSSQSQueue"`
-	GCPPubSubSubscription `graphql:"... on GCPPubSubSubscription"`
+	PubSubSubscription `graphql:"... on PubSubSubscription"`
 
-	GCPPubSubTopic `graphql:"... on GCPPubSubTopic"`
-	AWSSNSTopic    `graphql:"... on AWSSNSTopic"`
+	PubSubTopic `graphql:"... on PubSubTopic"`
+
+	SQLDatabase `graphql:"... on SQLDatabase"`
+
+	RedisKeyspace `graphql:"... on RedisKeyspace"`
+
+	Service `graphql:"... on Service"`
+
+	Gateway `graphql:"... on Gateway"`
 }
 
 var _ datasource.DataSource = &EncoreDataSource{}
 
-func NewEncoreDataSource(typeRef TypeRef, name string, tfTypes ...TFType) datasource.DataSource {
+func NewEncoreDataSource(typeRef TypeRef, name, desc string, fragments ...string) datasource.DataSource {
 	return &EncoreDataSource{
 		typeRef: typeRef,
 		name:    name,
-		schema:  createSchema(tfTypes...),
+		schema:  createSchema(desc, fragments...),
 	}
 }
 

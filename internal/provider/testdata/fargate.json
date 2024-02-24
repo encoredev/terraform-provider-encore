@@ -1,0 +1,1939 @@
+{
+  "data": {
+    "app": {
+      "env": {
+        "needs": [
+          {
+            "id": "res_16oqvhpus0nak4alapl0",
+            "typeRef": "need.CacheKeyspace",
+            "encoreName": "cache-cluster",
+            "satisfier": {
+              "__typename": "RedisKeyspace",
+              "databaseNumber": 0,
+              "cluster": {
+                "arn": "arn:aws:elasticache:us-east-1:406859400861:replicationgroup:bauta-tmg2-aws-cache-cluster-9204540c",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:elasticache:us-east-1:406859400861:subnetgroup:redis-14ba1b4b",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0733ad9be8a3d498a"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:elasticache:us-east-1:406859400861:parametergroup:bauta-tmg2-aws-cache-cluster-1fb01a2b"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alap70",
+            "typeRef": "need.Database",
+            "encoreName": "todo",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alape0",
+            "typeRef": "need.Database",
+            "encoreName": "todo1",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alap80",
+            "typeRef": "need.Database",
+            "encoreName": "todo2",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alap8g",
+            "typeRef": "need.Database",
+            "encoreName": "todo3",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alap90",
+            "typeRef": "need.Database",
+            "encoreName": "todo4",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alap9g",
+            "typeRef": "need.Database",
+            "encoreName": "todo5",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alapa0",
+            "typeRef": "need.Database",
+            "encoreName": "todo6",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alapag",
+            "typeRef": "need.Database",
+            "encoreName": "todo7",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alapb0",
+            "typeRef": "need.Database",
+            "encoreName": "todo8",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alapbg",
+            "typeRef": "need.Database",
+            "encoreName": "todo9",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alapc0",
+            "typeRef": "need.Database",
+            "encoreName": "todo10",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alapcg",
+            "typeRef": "need.Database",
+            "encoreName": "todo11",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alapd0",
+            "typeRef": "need.Database",
+            "encoreName": "todo12",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alapdg",
+            "typeRef": "need.Database",
+            "encoreName": "todo13",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alap30",
+            "typeRef": "need.Database",
+            "encoreName": "todo14",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alapeg",
+            "typeRef": "need.Database",
+            "encoreName": "todo15",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alapf0",
+            "typeRef": "need.Database",
+            "encoreName": "todo16",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alapfg",
+            "typeRef": "need.Database",
+            "encoreName": "todo17",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alapg0",
+            "typeRef": "need.Database",
+            "encoreName": "todo18",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alapgg",
+            "typeRef": "need.Database",
+            "encoreName": "todo19",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alaph0",
+            "typeRef": "need.Database",
+            "encoreName": "todo20",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alaphg",
+            "typeRef": "need.Database",
+            "encoreName": "todo21",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alapi0",
+            "typeRef": "need.Database",
+            "encoreName": "todo22",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alaoqg",
+            "typeRef": "need.Database",
+            "encoreName": "todo23",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alap7g",
+            "typeRef": "need.Database",
+            "encoreName": "todo24",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alap6g",
+            "typeRef": "need.Database",
+            "encoreName": "todo25",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alap60",
+            "typeRef": "need.Database",
+            "encoreName": "todo26",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alap5g",
+            "typeRef": "need.Database",
+            "encoreName": "todo27",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alap50",
+            "typeRef": "need.Database",
+            "encoreName": "todo28",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alap4g",
+            "typeRef": "need.Database",
+            "encoreName": "todo29",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alap40",
+            "typeRef": "need.Database",
+            "encoreName": "todo30",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alap3g",
+            "typeRef": "need.Database",
+            "encoreName": "database",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:us-east-1:406859400861:db:bautatmg2aws9685521a",
+                "vpc": {
+                  "id": "vpc-0a132ee5254913a73"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:subgrp:bauta-tmg2-aws-fbd10e6f",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-003c5f0a1e41bfaf8",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-0d033f189117dcf01",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg-0be1db8dbcf1c913f"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:us-east-1:406859400861:pg:rds-instance-16-9847318a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alaof0",
+            "typeRef": "need.Gateway",
+            "encoreName": "api-gateway",
+            "satisfier": {
+              "__typename": "Gateway",
+              "compute": {
+                "arn": "arn:aws:ecs:us-east-1:406859400861:task-definition/bauta-tmg2-aws-encore-508a6ccf:2",
+                "service": {
+                  "arn": "arn:aws:ecs:us-east-1:406859400861:service/bauta-tmg2-aws-fe55251c/encore-9f2686cb",
+                  "cluster": {
+                    "arn": "arn:aws:ecs:us-east-1:406859400861:cluster/bauta-tmg2-aws-fe55251c"
+                  },
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-02bb789db9370d211",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-09d48a6c46687f5ac",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ],
+                  "securityGroups": [
+                    {
+                      "id": "sg-02f32ce1c0e0e89b3"
+                    }
+                  ]
+                },
+                "taskRole": {
+                  "arn": "arn:aws:iam::406859400861:role/encore/bauta-tmg2/aws/bauta-tmg2-aws-encore-task-role-56e3f98d"
+                },
+                "executionRole": {
+                  "arn": "arn:aws:iam::406859400861:role/encore/bauta-tmg2/aws/bauta-tmg2-aws-encore-execution-role-6b387b1b"
+                }
+              },
+              "route": null,
+              "ingress": {
+                "arn": "arn:aws:elasticloadbalancing:us-east-1:406859400861:loadbalancer/app/bauta-tmg2-aws-d7bf121c/a567e6fab70f8b4e",
+                "listeners": [
+                  {
+                    "arn": "arn:aws:elasticloadbalancing:us-east-1:406859400861:listener/app/bauta-tmg2-aws-d7bf121c/a567e6fab70f8b4e/8f2ee2d4f93cdd60",
+                    "port": 80,
+                    "protocol": "HTTP"
+                  },
+                  {
+                    "arn": "arn:aws:elasticloadbalancing:us-east-1:406859400861:listener/app/bauta-tmg2-aws-d7bf121c/a567e6fab70f8b4e/eb6d984c08b9e908",
+                    "port": 443,
+                    "protocol": "HTTPS"
+                  },
+                  {
+                    "arn": "arn:aws:elasticloadbalancing:us-east-1:406859400861:listener/app/bauta-tmg2-aws-d7bf121c/a567e6fab70f8b4e/843bea5633045524",
+                    "port": 54355,
+                    "protocol": "HTTPS"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alaogg",
+            "typeRef": "need.Service",
+            "encoreName": "cron",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "arn": "arn:aws:ecs:us-east-1:406859400861:task-definition/bauta-tmg2-aws-encore-508a6ccf:2",
+                "service": {
+                  "arn": "arn:aws:ecs:us-east-1:406859400861:service/bauta-tmg2-aws-fe55251c/encore-9f2686cb",
+                  "cluster": {
+                    "arn": "arn:aws:ecs:us-east-1:406859400861:cluster/bauta-tmg2-aws-fe55251c"
+                  },
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-02bb789db9370d211",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-09d48a6c46687f5ac",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ],
+                  "securityGroups": [
+                    {
+                      "id": "sg-02f32ce1c0e0e89b3"
+                    }
+                  ]
+                },
+                "taskRole": {
+                  "arn": "arn:aws:iam::406859400861:role/encore/bauta-tmg2/aws/bauta-tmg2-aws-encore-task-role-56e3f98d"
+                },
+                "executionRole": {
+                  "arn": "arn:aws:iam::406859400861:role/encore/bauta-tmg2/aws/bauta-tmg2-aws-encore-execution-role-6b387b1b"
+                }
+              },
+              "route": null
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alaoj0",
+            "typeRef": "need.Service",
+            "encoreName": "http",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "arn": "arn:aws:ecs:us-east-1:406859400861:task-definition/bauta-tmg2-aws-encore-508a6ccf:2",
+                "service": {
+                  "arn": "arn:aws:ecs:us-east-1:406859400861:service/bauta-tmg2-aws-fe55251c/encore-9f2686cb",
+                  "cluster": {
+                    "arn": "arn:aws:ecs:us-east-1:406859400861:cluster/bauta-tmg2-aws-fe55251c"
+                  },
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-02bb789db9370d211",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-09d48a6c46687f5ac",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ],
+                  "securityGroups": [
+                    {
+                      "id": "sg-02f32ce1c0e0e89b3"
+                    }
+                  ]
+                },
+                "taskRole": {
+                  "arn": "arn:aws:iam::406859400861:role/encore/bauta-tmg2/aws/bauta-tmg2-aws-encore-task-role-56e3f98d"
+                },
+                "executionRole": {
+                  "arn": "arn:aws:iam::406859400861:role/encore/bauta-tmg2/aws/bauta-tmg2-aws-encore-execution-role-6b387b1b"
+                }
+              },
+              "route": null
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alaojg",
+            "typeRef": "need.Service",
+            "encoreName": "ping",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "arn": "arn:aws:ecs:us-east-1:406859400861:task-definition/bauta-tmg2-aws-encore-508a6ccf:2",
+                "service": {
+                  "arn": "arn:aws:ecs:us-east-1:406859400861:service/bauta-tmg2-aws-fe55251c/encore-9f2686cb",
+                  "cluster": {
+                    "arn": "arn:aws:ecs:us-east-1:406859400861:cluster/bauta-tmg2-aws-fe55251c"
+                  },
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-02bb789db9370d211",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-09d48a6c46687f5ac",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ],
+                  "securityGroups": [
+                    {
+                      "id": "sg-02f32ce1c0e0e89b3"
+                    }
+                  ]
+                },
+                "taskRole": {
+                  "arn": "arn:aws:iam::406859400861:role/encore/bauta-tmg2/aws/bauta-tmg2-aws-encore-task-role-56e3f98d"
+                },
+                "executionRole": {
+                  "arn": "arn:aws:iam::406859400861:role/encore/bauta-tmg2/aws/bauta-tmg2-aws-encore-execution-role-6b387b1b"
+                }
+              },
+              "route": null
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alaofg",
+            "typeRef": "need.Service",
+            "encoreName": "cache",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "arn": "arn:aws:ecs:us-east-1:406859400861:task-definition/bauta-tmg2-aws-encore-508a6ccf:2",
+                "service": {
+                  "arn": "arn:aws:ecs:us-east-1:406859400861:service/bauta-tmg2-aws-fe55251c/encore-9f2686cb",
+                  "cluster": {
+                    "arn": "arn:aws:ecs:us-east-1:406859400861:cluster/bauta-tmg2-aws-fe55251c"
+                  },
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-02bb789db9370d211",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-09d48a6c46687f5ac",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ],
+                  "securityGroups": [
+                    {
+                      "id": "sg-02f32ce1c0e0e89b3"
+                    }
+                  ]
+                },
+                "taskRole": {
+                  "arn": "arn:aws:iam::406859400861:role/encore/bauta-tmg2/aws/bauta-tmg2-aws-encore-task-role-56e3f98d"
+                },
+                "executionRole": {
+                  "arn": "arn:aws:iam::406859400861:role/encore/bauta-tmg2/aws/bauta-tmg2-aws-encore-execution-role-6b387b1b"
+                }
+              },
+              "route": null
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alaohg",
+            "typeRef": "need.Service",
+            "encoreName": "event",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "arn": "arn:aws:ecs:us-east-1:406859400861:task-definition/bauta-tmg2-aws-encore-508a6ccf:2",
+                "service": {
+                  "arn": "arn:aws:ecs:us-east-1:406859400861:service/bauta-tmg2-aws-fe55251c/encore-9f2686cb",
+                  "cluster": {
+                    "arn": "arn:aws:ecs:us-east-1:406859400861:cluster/bauta-tmg2-aws-fe55251c"
+                  },
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-02bb789db9370d211",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-09d48a6c46687f5ac",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ],
+                  "securityGroups": [
+                    {
+                      "id": "sg-02f32ce1c0e0e89b3"
+                    }
+                  ]
+                },
+                "taskRole": {
+                  "arn": "arn:aws:iam::406859400861:role/encore/bauta-tmg2/aws/bauta-tmg2-aws-encore-task-role-56e3f98d"
+                },
+                "executionRole": {
+                  "arn": "arn:aws:iam::406859400861:role/encore/bauta-tmg2/aws/bauta-tmg2-aws-encore-execution-role-6b387b1b"
+                }
+              },
+              "route": null
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alaog0",
+            "typeRef": "need.Service",
+            "encoreName": "config",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "arn": "arn:aws:ecs:us-east-1:406859400861:task-definition/bauta-tmg2-aws-encore-508a6ccf:2",
+                "service": {
+                  "arn": "arn:aws:ecs:us-east-1:406859400861:service/bauta-tmg2-aws-fe55251c/encore-9f2686cb",
+                  "cluster": {
+                    "arn": "arn:aws:ecs:us-east-1:406859400861:cluster/bauta-tmg2-aws-fe55251c"
+                  },
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-02bb789db9370d211",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-09d48a6c46687f5ac",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ],
+                  "securityGroups": [
+                    {
+                      "id": "sg-02f32ce1c0e0e89b3"
+                    }
+                  ]
+                },
+                "taskRole": {
+                  "arn": "arn:aws:iam::406859400861:role/encore/bauta-tmg2/aws/bauta-tmg2-aws-encore-task-role-56e3f98d"
+                },
+                "executionRole": {
+                  "arn": "arn:aws:iam::406859400861:role/encore/bauta-tmg2/aws/bauta-tmg2-aws-encore-execution-role-6b387b1b"
+                }
+              },
+              "route": null
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alaoig",
+            "typeRef": "need.Service",
+            "encoreName": "headers",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "arn": "arn:aws:ecs:us-east-1:406859400861:task-definition/bauta-tmg2-aws-encore-508a6ccf:2",
+                "service": {
+                  "arn": "arn:aws:ecs:us-east-1:406859400861:service/bauta-tmg2-aws-fe55251c/encore-9f2686cb",
+                  "cluster": {
+                    "arn": "arn:aws:ecs:us-east-1:406859400861:cluster/bauta-tmg2-aws-fe55251c"
+                  },
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-02bb789db9370d211",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-09d48a6c46687f5ac",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ],
+                  "securityGroups": [
+                    {
+                      "id": "sg-02f32ce1c0e0e89b3"
+                    }
+                  ]
+                },
+                "taskRole": {
+                  "arn": "arn:aws:iam::406859400861:role/encore/bauta-tmg2/aws/bauta-tmg2-aws-encore-task-role-56e3f98d"
+                },
+                "executionRole": {
+                  "arn": "arn:aws:iam::406859400861:role/encore/bauta-tmg2/aws/bauta-tmg2-aws-encore-execution-role-6b387b1b"
+                }
+              },
+              "route": null
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alaok0",
+            "typeRef": "need.Service",
+            "encoreName": "runtime",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "arn": "arn:aws:ecs:us-east-1:406859400861:task-definition/bauta-tmg2-aws-encore-508a6ccf:2",
+                "service": {
+                  "arn": "arn:aws:ecs:us-east-1:406859400861:service/bauta-tmg2-aws-fe55251c/encore-9f2686cb",
+                  "cluster": {
+                    "arn": "arn:aws:ecs:us-east-1:406859400861:cluster/bauta-tmg2-aws-fe55251c"
+                  },
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-02bb789db9370d211",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-09d48a6c46687f5ac",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ],
+                  "securityGroups": [
+                    {
+                      "id": "sg-02f32ce1c0e0e89b3"
+                    }
+                  ]
+                },
+                "taskRole": {
+                  "arn": "arn:aws:iam::406859400861:role/encore/bauta-tmg2/aws/bauta-tmg2-aws-encore-task-role-56e3f98d"
+                },
+                "executionRole": {
+                  "arn": "arn:aws:iam::406859400861:role/encore/bauta-tmg2/aws/bauta-tmg2-aws-encore-execution-role-6b387b1b"
+                }
+              },
+              "route": null
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alaokg",
+            "typeRef": "need.Service",
+            "encoreName": "secrets",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "arn": "arn:aws:ecs:us-east-1:406859400861:task-definition/bauta-tmg2-aws-encore-508a6ccf:2",
+                "service": {
+                  "arn": "arn:aws:ecs:us-east-1:406859400861:service/bauta-tmg2-aws-fe55251c/encore-9f2686cb",
+                  "cluster": {
+                    "arn": "arn:aws:ecs:us-east-1:406859400861:cluster/bauta-tmg2-aws-fe55251c"
+                  },
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-02bb789db9370d211",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-09d48a6c46687f5ac",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ],
+                  "securityGroups": [
+                    {
+                      "id": "sg-02f32ce1c0e0e89b3"
+                    }
+                  ]
+                },
+                "taskRole": {
+                  "arn": "arn:aws:iam::406859400861:role/encore/bauta-tmg2/aws/bauta-tmg2-aws-encore-task-role-56e3f98d"
+                },
+                "executionRole": {
+                  "arn": "arn:aws:iam::406859400861:role/encore/bauta-tmg2/aws/bauta-tmg2-aws-encore-execution-role-6b387b1b"
+                }
+              },
+              "route": null
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alaoh0",
+            "typeRef": "need.Service",
+            "encoreName": "database",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "arn": "arn:aws:ecs:us-east-1:406859400861:task-definition/bauta-tmg2-aws-encore-508a6ccf:2",
+                "service": {
+                  "arn": "arn:aws:ecs:us-east-1:406859400861:service/bauta-tmg2-aws-fe55251c/encore-9f2686cb",
+                  "cluster": {
+                    "arn": "arn:aws:ecs:us-east-1:406859400861:cluster/bauta-tmg2-aws-fe55251c"
+                  },
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-02bb789db9370d211",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-09d48a6c46687f5ac",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ],
+                  "securityGroups": [
+                    {
+                      "id": "sg-02f32ce1c0e0e89b3"
+                    }
+                  ]
+                },
+                "taskRole": {
+                  "arn": "arn:aws:iam::406859400861:role/encore/bauta-tmg2/aws/bauta-tmg2-aws-encore-task-role-56e3f98d"
+                },
+                "executionRole": {
+                  "arn": "arn:aws:iam::406859400861:role/encore/bauta-tmg2/aws/bauta-tmg2-aws-encore-execution-role-6b387b1b"
+                }
+              },
+              "route": null
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alaoi0",
+            "typeRef": "need.Service",
+            "encoreName": "features",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "arn": "arn:aws:ecs:us-east-1:406859400861:task-definition/bauta-tmg2-aws-encore-508a6ccf:2",
+                "service": {
+                  "arn": "arn:aws:ecs:us-east-1:406859400861:service/bauta-tmg2-aws-fe55251c/encore-9f2686cb",
+                  "cluster": {
+                    "arn": "arn:aws:ecs:us-east-1:406859400861:cluster/bauta-tmg2-aws-fe55251c"
+                  },
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-02bb789db9370d211",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-09d48a6c46687f5ac",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ],
+                  "securityGroups": [
+                    {
+                      "id": "sg-02f32ce1c0e0e89b3"
+                    }
+                  ]
+                },
+                "taskRole": {
+                  "arn": "arn:aws:iam::406859400861:role/encore/bauta-tmg2/aws/bauta-tmg2-aws-encore-task-role-56e3f98d"
+                },
+                "executionRole": {
+                  "arn": "arn:aws:iam::406859400861:role/encore/bauta-tmg2/aws/bauta-tmg2-aws-encore-execution-role-6b387b1b"
+                }
+              },
+              "route": null
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alaol0",
+            "typeRef": "need.Service",
+            "encoreName": "server_diff",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "arn": "arn:aws:ecs:us-east-1:406859400861:task-definition/bauta-tmg2-aws-encore-508a6ccf:2",
+                "service": {
+                  "arn": "arn:aws:ecs:us-east-1:406859400861:service/bauta-tmg2-aws-fe55251c/encore-9f2686cb",
+                  "cluster": {
+                    "arn": "arn:aws:ecs:us-east-1:406859400861:cluster/bauta-tmg2-aws-fe55251c"
+                  },
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-02bb789db9370d211",
+                      "az": "us-east-1-0",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:us-east-1:406859400861:subnet/subnet-09d48a6c46687f5ac",
+                      "az": "us-east-1-1",
+                      "vpc": {
+                        "id": "vpc-0a132ee5254913a73"
+                      }
+                    }
+                  ],
+                  "securityGroups": [
+                    {
+                      "id": "sg-02f32ce1c0e0e89b3"
+                    }
+                  ]
+                },
+                "taskRole": {
+                  "arn": "arn:aws:iam::406859400861:role/encore/bauta-tmg2/aws/bauta-tmg2-aws-encore-task-role-56e3f98d"
+                },
+                "executionRole": {
+                  "arn": "arn:aws:iam::406859400861:role/encore/bauta-tmg2/aws/bauta-tmg2-aws-encore-execution-role-6b387b1b"
+                }
+              },
+              "route": null
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alapj0",
+            "typeRef": "need.Topic",
+            "encoreName": "events",
+            "satisfier": {
+              "__typename": "AWSSNSTopic",
+              "arn": "arn:aws:sns:us-east-1:406859400861:bauta-tmg2-aws-events-a608844a"
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alapjg",
+            "typeRef": "need.Subscription",
+            "encoreName": "log-event",
+            "satisfier": {
+              "__typename": "AWSSNSSubscription",
+              "arn": "arn:aws:sns:us-east-1:406859400861:bauta-tmg2-aws-events-a608844a:b8428290-4845-4a4a-8ecf-52b9ecffcfef",
+              "topic": {
+                "arn": "arn:aws:sns:us-east-1:406859400861:bauta-tmg2-aws-events-a608844a"
+              },
+              "queue": {
+                "arn": "arn:aws:sqs:us-east-1:406859400861:bauta-tmg2-aws-events-log-event-997fe8da",
+                "dlq": {
+                  "arn": "arn:aws:sqs:us-east-1:406859400861:bauta-tmg2-aws-events-log-event-dlq-887a86fe"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvhpus0nak4alapig",
+            "typeRef": "need.Topic",
+            "encoreName": "request-events",
+            "satisfier": {
+              "__typename": "AWSSNSTopic",
+              "arn": "arn:aws:sns:us-east-1:406859400861:bauta-tmg2-aws-request-events-5baf517d"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

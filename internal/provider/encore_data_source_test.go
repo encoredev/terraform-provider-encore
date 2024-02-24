@@ -26,5 +26,6 @@ provider "encore" {}
 
 data "encore_pubsub_topic" "test" {
     name = "ordered"
+	env = "gke"
 }
 `

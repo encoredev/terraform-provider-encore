@@ -3,12 +3,12 @@
 page_title: "encore_pubsub_topic Data Source - terraform-provider-encore"
 subcategory: ""
 description: |-
-  Data source that provides information about an Encore-managed resource
+  Encore provisioned Pub/Sub topic information
 ---
 
 # encore_pubsub_topic (Data Source)
 
-Data source that provides information about an Encore-managed resource
+Encore provisioned Pub/Sub topic information
 
 ## Example Usage
 
@@ -36,16 +36,19 @@ data "aws_iam_policy_document" "mypolicy" {
 
 ### Optional
 
-- `aws_sns` (Attributes) Encore provisioned SNS Topic information (see [below for nested schema](#nestedatt--aws_sns))
 - `env` (String) The environment of the Encore resource. Defaults to the provider environment
-- `gcp_pubsub` (Attributes) Encore provisioned GCP Pubsub Topic information (see [below for nested schema](#nestedatt--gcp_pubsub))
+
+### Read-Only
+
+- `aws_sns` (Attributes) (see [below for nested schema](#nestedatt--aws_sns))
+- `gcp_pubsub` (Attributes) (see [below for nested schema](#nestedatt--gcp_pubsub))
 
 <a id="nestedatt--aws_sns"></a>
 ### Nested Schema for `aws_sns`
 
 Read-Only:
 
-- `arn` (String) The [ARN](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html) for this  sns topic
+- `arn` (String) The [ARN](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html) for this resource
 
 
 <a id="nestedatt--gcp_pubsub"></a>
@@ -53,4 +56,4 @@ Read-Only:
 
 Read-Only:
 
-- `id` (String) The [relative resource name](https://cloud.google.com/apis/design/resource_names#id) for this Pubsub topic in the form of `projects/{project}/topics/{topic}`
+- `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#id) in the form of `projects/{project}/topics/{topic}`

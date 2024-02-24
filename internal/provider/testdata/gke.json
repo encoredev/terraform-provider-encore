@@ -1,0 +1,1117 @@
+{
+  "data": {
+    "app": {
+      "env": {
+        "needs": [
+          {
+            "id": "res_16or00pus0nak4albtfg",
+            "typeRef": "need.CacheKeyspace",
+            "encoreName": "cache-cluster",
+            "satisfier": {
+              "__typename": "RedisKeyspace",
+              "databaseNumber": 0,
+              "cluster": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/locations/northamerica-northeast1/instances/bauta-tmg2-gke-c-9538575b",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt10",
+            "typeRef": "need.Database",
+            "encoreName": "todo",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt80",
+            "typeRef": "need.Database",
+            "encoreName": "todo1",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt20",
+            "typeRef": "need.Database",
+            "encoreName": "todo2",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt2g",
+            "typeRef": "need.Database",
+            "encoreName": "todo3",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt30",
+            "typeRef": "need.Database",
+            "encoreName": "todo4",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt3g",
+            "typeRef": "need.Database",
+            "encoreName": "todo5",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt40",
+            "typeRef": "need.Database",
+            "encoreName": "todo6",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt4g",
+            "typeRef": "need.Database",
+            "encoreName": "todo7",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt50",
+            "typeRef": "need.Database",
+            "encoreName": "todo8",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt5g",
+            "typeRef": "need.Database",
+            "encoreName": "todo9",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt60",
+            "typeRef": "need.Database",
+            "encoreName": "todo10",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt6g",
+            "typeRef": "need.Database",
+            "encoreName": "todo11",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt70",
+            "typeRef": "need.Database",
+            "encoreName": "todo12",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt7g",
+            "typeRef": "need.Database",
+            "encoreName": "todo13",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albst0",
+            "typeRef": "need.Database",
+            "encoreName": "todo14",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt8g",
+            "typeRef": "need.Database",
+            "encoreName": "todo15",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt90",
+            "typeRef": "need.Database",
+            "encoreName": "todo16",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt9g",
+            "typeRef": "need.Database",
+            "encoreName": "todo17",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albta0",
+            "typeRef": "need.Database",
+            "encoreName": "todo18",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albtag",
+            "typeRef": "need.Database",
+            "encoreName": "todo19",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albtb0",
+            "typeRef": "need.Database",
+            "encoreName": "todo20",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albtbg",
+            "typeRef": "need.Database",
+            "encoreName": "todo21",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albtc0",
+            "typeRef": "need.Database",
+            "encoreName": "todo22",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albssg",
+            "typeRef": "need.Database",
+            "encoreName": "todo23",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt1g",
+            "typeRef": "need.Database",
+            "encoreName": "todo24",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt0g",
+            "typeRef": "need.Database",
+            "encoreName": "todo25",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt00",
+            "typeRef": "need.Database",
+            "encoreName": "todo26",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albsvg",
+            "typeRef": "need.Database",
+            "encoreName": "todo27",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albsv0",
+            "typeRef": "need.Database",
+            "encoreName": "todo28",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albsug",
+            "typeRef": "need.Database",
+            "encoreName": "todo29",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albsu0",
+            "typeRef": "need.Database",
+            "encoreName": "todo30",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albstg",
+            "typeRef": "need.Database",
+            "encoreName": "database",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/regions/northamerica-northeast1/instances/bauta-tmg2-gke-a711804a",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "ae98ee1d7b8bdfd15e00a541f669fa0745669daa"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albrlg",
+            "typeRef": "need.Gateway",
+            "encoreName": "api-gateway",
+            "satisfier": {
+              "__typename": "Gateway",
+              "compute": {
+                "data": {
+                  "name": "encore-app"
+                },
+                "deployment": {
+                  "data": {
+                    "name": "api-gateway-0297090d"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "bauta-tmg2-gke-c7c22b3b"
+                    },
+                    "cluster": {
+                      "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/locations/northamerica-northeast1/clusters/bauta-tmg2-gke-7667e14d"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "api-gateway-3d54862e"
+                    },
+                    "workloadIdentity": {
+                      "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/serviceAccounts/api-gateway-7608947d@bauta-tmg2-gke-1c1e0baf.iam.gserviceaccount.com"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "api-gateway-c9c1aa2e"
+                }
+              },
+              "ingress": {
+                "data": {
+                  "name": "res-16or00pus0nak4albtkg-encore-aws-gateway-com-2a6a302a"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albrn0",
+            "typeRef": "need.Service",
+            "encoreName": "cron",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "data": {
+                  "name": "encore-app"
+                },
+                "deployment": {
+                  "data": {
+                    "name": "cron-5e93972a"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "bauta-tmg2-gke-c7c22b3b"
+                    },
+                    "cluster": {
+                      "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/locations/northamerica-northeast1/clusters/bauta-tmg2-gke-7667e14d"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "cron-047eb51d"
+                    },
+                    "workloadIdentity": {
+                      "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/serviceAccounts/cron-c614531d@bauta-tmg2-gke-1c1e0baf.iam.gserviceaccount.com"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "cron"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albrpg",
+            "typeRef": "need.Service",
+            "encoreName": "http",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "data": {
+                  "name": "encore-app"
+                },
+                "deployment": {
+                  "data": {
+                    "name": "http-ca29db3d"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "bauta-tmg2-gke-c7c22b3b"
+                    },
+                    "cluster": {
+                      "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/locations/northamerica-northeast1/clusters/bauta-tmg2-gke-7667e14d"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "http-3b5006ac"
+                    },
+                    "workloadIdentity": {
+                      "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/serviceAccounts/http-b0efd7cf@bauta-tmg2-gke-1c1e0baf.iam.gserviceaccount.com"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "http"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albrq0",
+            "typeRef": "need.Service",
+            "encoreName": "ping",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "data": {
+                  "name": "encore-app"
+                },
+                "deployment": {
+                  "data": {
+                    "name": "ping-14b3bf9c"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "bauta-tmg2-gke-c7c22b3b"
+                    },
+                    "cluster": {
+                      "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/locations/northamerica-northeast1/clusters/bauta-tmg2-gke-7667e14d"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "ping-134a4a6f"
+                    },
+                    "workloadIdentity": {
+                      "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/serviceAccounts/ping-740c682a@bauta-tmg2-gke-1c1e0baf.iam.gserviceaccount.com"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "ping"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albrm0",
+            "typeRef": "need.Service",
+            "encoreName": "cache",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "data": {
+                  "name": "encore-app"
+                },
+                "deployment": {
+                  "data": {
+                    "name": "cache-f93c509d"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "bauta-tmg2-gke-c7c22b3b"
+                    },
+                    "cluster": {
+                      "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/locations/northamerica-northeast1/clusters/bauta-tmg2-gke-7667e14d"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "cache-43ffe45e"
+                    },
+                    "workloadIdentity": {
+                      "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/serviceAccounts/cache-534dd7ed@bauta-tmg2-gke-1c1e0baf.iam.gserviceaccount.com"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "cache"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albro0",
+            "typeRef": "need.Service",
+            "encoreName": "event",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "data": {
+                  "name": "encore-app"
+                },
+                "deployment": {
+                  "data": {
+                    "name": "event-0e57e9bb"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "bauta-tmg2-gke-c7c22b3b"
+                    },
+                    "cluster": {
+                      "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/locations/northamerica-northeast1/clusters/bauta-tmg2-gke-7667e14d"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "event-eebebafb"
+                    },
+                    "workloadIdentity": {
+                      "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/serviceAccounts/event-7b1cd27c@bauta-tmg2-gke-1c1e0baf.iam.gserviceaccount.com"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "event"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albrmg",
+            "typeRef": "need.Service",
+            "encoreName": "config",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "data": {
+                  "name": "encore-app"
+                },
+                "deployment": {
+                  "data": {
+                    "name": "config-ea1288ce"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "bauta-tmg2-gke-c7c22b3b"
+                    },
+                    "cluster": {
+                      "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/locations/northamerica-northeast1/clusters/bauta-tmg2-gke-7667e14d"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "config-6ed44cdb"
+                    },
+                    "workloadIdentity": {
+                      "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/serviceAccounts/config-c9cd1d6e@bauta-tmg2-gke-1c1e0baf.iam.gserviceaccount.com"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "config"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albrp0",
+            "typeRef": "need.Service",
+            "encoreName": "headers",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "data": {
+                  "name": "encore-app"
+                },
+                "deployment": {
+                  "data": {
+                    "name": "headers-032f132a"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "bauta-tmg2-gke-c7c22b3b"
+                    },
+                    "cluster": {
+                      "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/locations/northamerica-northeast1/clusters/bauta-tmg2-gke-7667e14d"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "headers-00df95dc"
+                    },
+                    "workloadIdentity": {
+                      "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/serviceAccounts/headers-3e2d54fc@bauta-tmg2-gke-1c1e0baf.iam.gserviceaccount.com"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "headers"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albrqg",
+            "typeRef": "need.Service",
+            "encoreName": "runtime",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "data": {
+                  "name": "encore-app"
+                },
+                "deployment": {
+                  "data": {
+                    "name": "runtime-6afa50fa"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "bauta-tmg2-gke-c7c22b3b"
+                    },
+                    "cluster": {
+                      "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/locations/northamerica-northeast1/clusters/bauta-tmg2-gke-7667e14d"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "runtime-dca7840e"
+                    },
+                    "workloadIdentity": {
+                      "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/serviceAccounts/runtime-76bdde7b@bauta-tmg2-gke-1c1e0baf.iam.gserviceaccount.com"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "runtime"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albrr0",
+            "typeRef": "need.Service",
+            "encoreName": "secrets",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "data": {
+                  "name": "encore-app"
+                },
+                "deployment": {
+                  "data": {
+                    "name": "secrets-8e81581a"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "bauta-tmg2-gke-c7c22b3b"
+                    },
+                    "cluster": {
+                      "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/locations/northamerica-northeast1/clusters/bauta-tmg2-gke-7667e14d"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "secrets-02d2e1ed"
+                    },
+                    "workloadIdentity": {
+                      "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/serviceAccounts/secrets-7c98816c@bauta-tmg2-gke-1c1e0baf.iam.gserviceaccount.com"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "secrets"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albrng",
+            "typeRef": "need.Service",
+            "encoreName": "database",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "data": {
+                  "name": "encore-app"
+                },
+                "deployment": {
+                  "data": {
+                    "name": "database-5ea49d6a"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "bauta-tmg2-gke-c7c22b3b"
+                    },
+                    "cluster": {
+                      "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/locations/northamerica-northeast1/clusters/bauta-tmg2-gke-7667e14d"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "database-f59a139e"
+                    },
+                    "workloadIdentity": {
+                      "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/serviceAccounts/database-d25ea3fe@bauta-tmg2-gke-1c1e0baf.iam.gserviceaccount.com"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "database"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albrog",
+            "typeRef": "need.Service",
+            "encoreName": "features",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "data": {
+                  "name": "encore-app"
+                },
+                "deployment": {
+                  "data": {
+                    "name": "features-ce23f91f"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "bauta-tmg2-gke-c7c22b3b"
+                    },
+                    "cluster": {
+                      "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/locations/northamerica-northeast1/clusters/bauta-tmg2-gke-7667e14d"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "features-f1a1bc0d"
+                    },
+                    "workloadIdentity": {
+                      "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/serviceAccounts/features-faadff1c@bauta-tmg2-gke-1c1e0baf.iam.gserviceaccount.com"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "features"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albrrg",
+            "typeRef": "need.Service",
+            "encoreName": "server_diff",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "data": {
+                  "name": "encore-app"
+                },
+                "deployment": {
+                  "data": {
+                    "name": "server-diff-a476694c"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "bauta-tmg2-gke-c7c22b3b"
+                    },
+                    "cluster": {
+                      "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/locations/northamerica-northeast1/clusters/bauta-tmg2-gke-7667e14d"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "server-diff-b86918dc"
+                    },
+                    "workloadIdentity": {
+                      "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/serviceAccounts/server-diff-8b3ae45b@bauta-tmg2-gke-1c1e0baf.iam.gserviceaccount.com"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "server-diff"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albtd0",
+            "typeRef": "need.Topic",
+            "encoreName": "events",
+            "satisfier": {
+              "__typename": "GCPPubSubTopic",
+              "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/topics/events-3233bb6b"
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albtdg",
+            "typeRef": "need.Subscription",
+            "encoreName": "log-event",
+            "satisfier": {
+              "__typename": "GCPPubSubSubscription",
+              "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/subscriptions/events-3233bb6b.log-event-687b593c",
+              "topic": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/topics/events-3233bb6b"
+              },
+              "dlq": {
+                "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/subscriptions/events-3233bb6b.log-event-687b593c.deadletter.encore",
+                "topic": {
+                  "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/topics/events-3233bb6b.log-event-687b593c.deadletter"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albtcg",
+            "typeRef": "need.Topic",
+            "encoreName": "request-events",
+            "satisfier": {
+              "__typename": "GCPPubSubTopic",
+              "selfLink": "projects/bauta-tmg2-gke-1c1e0baf/topics/request-events-d2a0a10d"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

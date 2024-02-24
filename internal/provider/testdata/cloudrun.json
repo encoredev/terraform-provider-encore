@@ -1,0 +1,818 @@
+{
+  "data": {
+    "app": {
+      "env": {
+        "needs": [
+          {
+            "id": "res_16oqvnhus0nak4albbf0",
+            "typeRef": "need.CacheKeyspace",
+            "encoreName": "cache-cluster",
+            "satisfier": {
+              "__typename": "RedisKeyspace",
+              "databaseNumber": 0,
+              "cluster": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/locations/northamerica-northeast1/instances/bauta-tmg2-cloud-6de600db",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albb0g",
+            "typeRef": "need.Database",
+            "encoreName": "todo",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albb7g",
+            "typeRef": "need.Database",
+            "encoreName": "todo1",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albb1g",
+            "typeRef": "need.Database",
+            "encoreName": "todo2",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albb20",
+            "typeRef": "need.Database",
+            "encoreName": "todo3",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albb2g",
+            "typeRef": "need.Database",
+            "encoreName": "todo4",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albb30",
+            "typeRef": "need.Database",
+            "encoreName": "todo5",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albb3g",
+            "typeRef": "need.Database",
+            "encoreName": "todo6",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albb40",
+            "typeRef": "need.Database",
+            "encoreName": "todo7",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albb4g",
+            "typeRef": "need.Database",
+            "encoreName": "todo8",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albb50",
+            "typeRef": "need.Database",
+            "encoreName": "todo9",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albb5g",
+            "typeRef": "need.Database",
+            "encoreName": "todo10",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albb60",
+            "typeRef": "need.Database",
+            "encoreName": "todo11",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albb6g",
+            "typeRef": "need.Database",
+            "encoreName": "todo12",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albb70",
+            "typeRef": "need.Database",
+            "encoreName": "todo13",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albasg",
+            "typeRef": "need.Database",
+            "encoreName": "todo14",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albb80",
+            "typeRef": "need.Database",
+            "encoreName": "todo15",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albb8g",
+            "typeRef": "need.Database",
+            "encoreName": "todo16",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albb90",
+            "typeRef": "need.Database",
+            "encoreName": "todo17",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albb9g",
+            "typeRef": "need.Database",
+            "encoreName": "todo18",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albba0",
+            "typeRef": "need.Database",
+            "encoreName": "todo19",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albbag",
+            "typeRef": "need.Database",
+            "encoreName": "todo20",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albbb0",
+            "typeRef": "need.Database",
+            "encoreName": "todo21",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albbbg",
+            "typeRef": "need.Database",
+            "encoreName": "todo22",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albas0",
+            "typeRef": "need.Database",
+            "encoreName": "todo23",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albb10",
+            "typeRef": "need.Database",
+            "encoreName": "todo24",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albb00",
+            "typeRef": "need.Database",
+            "encoreName": "todo25",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albavg",
+            "typeRef": "need.Database",
+            "encoreName": "todo26",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albav0",
+            "typeRef": "need.Database",
+            "encoreName": "todo27",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albaug",
+            "typeRef": "need.Database",
+            "encoreName": "todo28",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albau0",
+            "typeRef": "need.Database",
+            "encoreName": "todo29",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albatg",
+            "typeRef": "need.Database",
+            "encoreName": "todo30",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albat0",
+            "typeRef": "need.Database",
+            "encoreName": "database",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/regions/northamerica-northeast1/instances/bauta-tmg2-cloud-ce3f50af",
+                "network": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "904c9725e1ede5f8d02a48863fe3029e51803622"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4alba80",
+            "typeRef": "need.Gateway",
+            "encoreName": "api-gateway",
+            "satisfier": {
+              "__typename": "Gateway",
+              "compute": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/locations/northamerica-northeast1/services/api-gateway-767f700d",
+                "serverlessVPCConnector": null,
+                "serviceAccount": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/serviceAccounts/api-gateway-9837f12e@bauta-tmg2-cloudrun-2984300f.iam.gserviceaccount.com"
+                }
+              },
+              "route": null,
+              "ingress": null
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4alba9g",
+            "typeRef": "need.Service",
+            "encoreName": "cron",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/locations/northamerica-northeast1/services/cron-21a5a08e",
+                "serverlessVPCConnector": null,
+                "serviceAccount": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/serviceAccounts/cron-142f249e@bauta-tmg2-cloudrun-2984300f.iam.gserviceaccount.com"
+                }
+              },
+              "route": null
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albac0",
+            "typeRef": "need.Service",
+            "encoreName": "http",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/locations/northamerica-northeast1/services/http-08af0fec",
+                "serverlessVPCConnector": null,
+                "serviceAccount": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/serviceAccounts/http-e0d73f4a@bauta-tmg2-cloudrun-2984300f.iam.gserviceaccount.com"
+                }
+              },
+              "route": null
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albacg",
+            "typeRef": "need.Service",
+            "encoreName": "ping",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/locations/northamerica-northeast1/services/ping-a1e6741d",
+                "serverlessVPCConnector": null,
+                "serviceAccount": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/serviceAccounts/ping-c07f436a@bauta-tmg2-cloudrun-2984300f.iam.gserviceaccount.com"
+                }
+              },
+              "route": null
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4alba8g",
+            "typeRef": "need.Service",
+            "encoreName": "cache",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/locations/northamerica-northeast1/services/cache-cf1b886d",
+                "serverlessVPCConnector": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/locations/northamerica-northeast1/connectors/bautatmg2cloudca3b184e"
+                },
+                "serviceAccount": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/serviceAccounts/cache-4920fa7a@bauta-tmg2-cloudrun-2984300f.iam.gserviceaccount.com"
+                }
+              },
+              "route": null
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albaag",
+            "typeRef": "need.Service",
+            "encoreName": "event",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/locations/northamerica-northeast1/services/event-4e47880b",
+                "serverlessVPCConnector": null,
+                "serviceAccount": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/serviceAccounts/event-20a8b3cb@bauta-tmg2-cloudrun-2984300f.iam.gserviceaccount.com"
+                }
+              },
+              "route": null
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4alba90",
+            "typeRef": "need.Service",
+            "encoreName": "config",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/locations/northamerica-northeast1/services/config-80a4640d",
+                "serverlessVPCConnector": null,
+                "serviceAccount": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/serviceAccounts/config-8c9a784d@bauta-tmg2-cloudrun-2984300f.iam.gserviceaccount.com"
+                }
+              },
+              "route": null
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albabg",
+            "typeRef": "need.Service",
+            "encoreName": "headers",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/locations/northamerica-northeast1/services/headers-ccc4771c",
+                "serverlessVPCConnector": null,
+                "serviceAccount": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/serviceAccounts/headers-f7d4881b@bauta-tmg2-cloudrun-2984300f.iam.gserviceaccount.com"
+                }
+              },
+              "route": null
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albad0",
+            "typeRef": "need.Service",
+            "encoreName": "runtime",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/locations/northamerica-northeast1/services/runtime-91efef0a",
+                "serverlessVPCConnector": null,
+                "serviceAccount": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/serviceAccounts/runtime-79fcac1d@bauta-tmg2-cloudrun-2984300f.iam.gserviceaccount.com"
+                }
+              },
+              "route": null
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albadg",
+            "typeRef": "need.Service",
+            "encoreName": "secrets",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/locations/northamerica-northeast1/services/secrets-7a49786e",
+                "serverlessVPCConnector": null,
+                "serviceAccount": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/serviceAccounts/secrets-03f103fc@bauta-tmg2-cloudrun-2984300f.iam.gserviceaccount.com"
+                }
+              },
+              "route": null
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albaa0",
+            "typeRef": "need.Service",
+            "encoreName": "database",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/locations/northamerica-northeast1/services/database-d52fccef",
+                "serverlessVPCConnector": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/locations/northamerica-northeast1/connectors/bautatmg2cloudca3b184e"
+                },
+                "serviceAccount": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/serviceAccounts/database-66515e3b@bauta-tmg2-cloudrun-2984300f.iam.gserviceaccount.com"
+                }
+              },
+              "route": null
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albab0",
+            "typeRef": "need.Service",
+            "encoreName": "features",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/locations/northamerica-northeast1/services/features-ebb4049d",
+                "serverlessVPCConnector": null,
+                "serviceAccount": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/serviceAccounts/features-dcd3565a@bauta-tmg2-cloudrun-2984300f.iam.gserviceaccount.com"
+                }
+              },
+              "route": null
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albae0",
+            "typeRef": "need.Service",
+            "encoreName": "server_diff",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/locations/northamerica-northeast1/services/server-diff-f0890dfa",
+                "serverlessVPCConnector": null,
+                "serviceAccount": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/serviceAccounts/server-diff-9ab0bcbe@bauta-tmg2-cloudrun-2984300f.iam.gserviceaccount.com"
+                }
+              },
+              "route": null
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albbcg",
+            "typeRef": "need.Topic",
+            "encoreName": "events",
+            "satisfier": {
+              "__typename": "GCPPubSubTopic",
+              "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/topics/events-a915a91a"
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albbd0",
+            "typeRef": "need.Subscription",
+            "encoreName": "log-event",
+            "satisfier": {
+              "__typename": "GCPPubSubSubscription",
+              "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/subscriptions/events-a915a91a.log-event-aa3756ee",
+              "topic": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/topics/events-a915a91a"
+              },
+              "dlq": {
+                "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/subscriptions/events-a915a91a.log-event-aa3756ee.deadletter.encore",
+                "topic": {
+                  "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/topics/events-a915a91a.log-event-aa3756ee.deadletter"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16oqvnhus0nak4albbc0",
+            "typeRef": "need.Topic",
+            "encoreName": "request-events",
+            "satisfier": {
+              "__typename": "GCPPubSubTopic",
+              "selfLink": "projects/bauta-tmg2-cloudrun-2984300f/topics/request-events-e25826fe"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

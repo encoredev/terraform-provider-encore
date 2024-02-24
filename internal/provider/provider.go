@@ -87,6 +87,10 @@ func (p *EncoreProvider) DataSources(ctx context.Context) []func() datasource.Da
 	return []func() datasource.DataSource{
 		NewPubSubTopic,
 		NewPubSubSubscription,
+		NewDatabase,
+		NewCache,
+		NewService,
+		NewGateway,
 	}
 }
 
