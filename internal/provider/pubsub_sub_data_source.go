@@ -9,20 +9,9 @@ func NewPubSubSubscription() datasource.DataSource {
 		"need.Subscription",
 		"pubsub_subscription",
 		"Encore provisioned Pub/Sub Subscription information",
-		"PubSubSubscription",
+		"AWSSNSSubscription",
+		"GCPPubSubSubscription",
 	)
-}
-
-type PubSubSubscription struct {
-	AwsSns    AWSSNSSubscription    `graphql:"... on AWSSNSSubscription"`
-	GcpPubsub GCPPubSubSubscription `graphql:"... on GCPPubSubSubscription"`
-}
-
-func (a *PubSubSubscription) GetDocs() (attrDesc map[string]string) {
-	return map[string]string{
-		"aws_sns":    "This property is set if the subscription is an AWS SNS subscription",
-		"gcp_pubsub": "This property is set if the subscription is a GCP Pub/Sub subscription",
-	}
 }
 
 type AWSSNSSubscription struct {
@@ -78,7 +67,7 @@ type GCPPubSubSubscription struct {
 
 func (a *GCPPubSubSubscription) GetDocs() (attrDesc map[string]string) {
 	return map[string]string{
-		"id":          "The [id](https://cloud.google.com/apis/design/resource_names#id) in the form of `projects/{project}/subscriptions/{subscription}`",
+		"id":          "The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) in the form of `projects/{project}/subscriptions/{subscription}`",
 		"dead_letter": "The dead letter queue for this subscription",
 	}
 }
@@ -90,7 +79,7 @@ type GCPDeadLetterQueue struct {
 
 func (a *GCPDeadLetterQueue) GetDocs() (attrDesc map[string]string) {
 	return map[string]string{
-		"id": "The [id](https://cloud.google.com/apis/design/resource_names#id) in the form of `projects/{project}/subscriptions/{subscription}`",
+		"id": "The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) in the form of `projects/{project}/subscriptions/{subscription}`",
 	}
 }
 

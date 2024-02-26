@@ -14,9 +14,11 @@ var queryType = reflect.TypeOf((*SatisfierQuery)(nil)).Elem()
 type SatisfierQuery struct {
 	Type string `graphql:"__typename"`
 
-	PubSubSubscription `graphql:"... on PubSubSubscription"`
+	AWSSNSSubscription    AWSSNSSubscription    `graphql:"... on AWSSNSSubscription" tf:"aws_sns"`
+	GCPPubSubSubscription GCPPubSubSubscription `graphql:"... on GCPPubSubSubscription" tf:"gcp_pubsub"`
 
-	PubSubTopic `graphql:"... on PubSubTopic"`
+	AWSSNSTopic    AWSSNSTopic    `graphql:"... on AWSSNSTopic" tf:"aws_sns"`
+	GCPPubSubTopic GCPPubSubTopic `graphql:"... on GCPPubSubTopic" tf:"gcp_pubsub"`
 
 	SQLDatabase `graphql:"... on SQLDatabase"`
 
@@ -25,6 +27,13 @@ type SatisfierQuery struct {
 	Service `graphql:"... on Service"`
 
 	Gateway `graphql:"... on Gateway"`
+}
+
+func (a *SatisfierQuery) GetDocs() (attrDesc map[string]string) {
+	return map[string]string{
+		"gcp_pubsub": "Set if the resource is provisioned by GCP Pub/Sub",
+		"aws_sns":    "Set if the resource is provisioned AWS SNS",
+	}
 }
 
 var _ datasource.DataSource = &EncoreDataSource{}

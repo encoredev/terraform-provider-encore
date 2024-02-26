@@ -25,27 +25,26 @@ Encore provisioned cache information
 
 ### Read-Only
 
-- `aws_redis` (Attributes) (see [below for nested schema](#nestedatt--aws_redis))
-- `database_number` (Number)
-- `gcp_redis` (Attributes) (see [below for nested schema](#nestedatt--gcp_redis))
+- `aws_redis` (Attributes) Set if the Redis cluster is provisioned on AWS (see [below for nested schema](#nestedatt--aws_redis))
+- `gcp_redis` (Attributes) Set if the Redis cluster is provisioned on GCP (see [below for nested schema](#nestedatt--gcp_redis))
 
 <a id="nestedatt--aws_redis"></a>
 ### Nested Schema for `aws_redis`
 
 Read-Only:
 
-- `arn` (String)
-- `parameter_group` (Attributes) (see [below for nested schema](#nestedatt--aws_redis--parameter_group))
-- `security_group` (Attributes) (see [below for nested schema](#nestedatt--aws_redis--security_group))
-- `subnet_group` (Attributes) (see [below for nested schema](#nestedatt--aws_redis--subnet_group))
-- `vpc` (Attributes) (see [below for nested schema](#nestedatt--aws_redis--vpc))
+- `arn` (String) The [Amazon Resource Name (ARN)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the Redis cluster
+- `parameter_group` (Attributes) The parameter group of the Redis cluster (see [below for nested schema](#nestedatt--aws_redis--parameter_group))
+- `security_group` (Attributes) The security group of the Redis cluster (see [below for nested schema](#nestedatt--aws_redis--security_group))
+- `subnet_group` (Attributes) The subnet group the Redis cluster is provisioned in (see [below for nested schema](#nestedatt--aws_redis--subnet_group))
+- `vpc` (Attributes) The VPC the Redis cluster is provisioned in (see [below for nested schema](#nestedatt--aws_redis--vpc))
 
 <a id="nestedatt--aws_redis--parameter_group"></a>
 ### Nested Schema for `aws_redis.parameter_group`
 
 Read-Only:
 
-- `arn` (String)
+- `arn` (String) The [ARN](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html) for the parameter group
 
 
 <a id="nestedatt--aws_redis--security_group"></a>
@@ -53,7 +52,7 @@ Read-Only:
 
 Read-Only:
 
-- `id` (String)
+- `id` (String) The [id](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) for the security group
 
 
 <a id="nestedatt--aws_redis--subnet_group"></a>
@@ -61,24 +60,24 @@ Read-Only:
 
 Read-Only:
 
-- `arn` (String)
-- `subnets` (List of Object) (see [below for nested schema](#nestedatt--aws_redis--subnet_group--subnets))
+- `arn` (String) The [Amazon Resource Name (ARN)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the subnet group
+- `subnets` (Attributes List) The subnets the resource is provisioned in (see [below for nested schema](#nestedatt--aws_redis--subnet_group--subnets))
 
 <a id="nestedatt--aws_redis--subnet_group--subnets"></a>
 ### Nested Schema for `aws_redis.subnet_group.subnets`
 
 Read-Only:
 
-- `arn` (String)
-- `az` (String)
-- `vpc` (Object) (see [below for nested schema](#nestedobjatt--aws_redis--subnet_group--subnets--vpc))
+- `arn` (String) The [ARN](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html) for the subnet
+- `az` (String) The [availability zone](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html) for the subnet
+- `vpc` (Attributes) The [VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) that the subnet is connected to (see [below for nested schema](#nestedatt--aws_redis--subnet_group--subnets--vpc))
 
-<a id="nestedobjatt--aws_redis--subnet_group--subnets--vpc"></a>
+<a id="nestedatt--aws_redis--subnet_group--subnets--vpc"></a>
 ### Nested Schema for `aws_redis.subnet_group.subnets.vpc`
 
 Read-Only:
 
-- `id` (String)
+- `id` (String) The [id](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) for the VPC
 
 
 
@@ -88,7 +87,7 @@ Read-Only:
 
 Read-Only:
 
-- `id` (String)
+- `id` (String) The [id](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) for the VPC
 
 
 
@@ -97,12 +96,12 @@ Read-Only:
 
 Read-Only:
 
-- `id` (String)
-- `network` (Attributes) (see [below for nested schema](#nestedatt--gcp_redis--network))
+- `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) in the form of `projects/{project}/locations/{location}/instances/{instance}`
+- `network` (Attributes) The network the Redis cluster is provisioned in (see [below for nested schema](#nestedatt--gcp_redis--network))
 
 <a id="nestedatt--gcp_redis--network"></a>
 ### Nested Schema for `gcp_redis.network`
 
 Read-Only:
 
-- `id` (String)
+- `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) in the form of `projects/{project}/global/networks/{network}`

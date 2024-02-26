@@ -40,8 +40,8 @@ data "aws_iam_policy_document" "mypolicy" {
 
 ### Read-Only
 
-- `aws_sns` (Attributes) (see [below for nested schema](#nestedatt--aws_sns))
-- `gcp_pubsub` (Attributes) (see [below for nested schema](#nestedatt--gcp_pubsub))
+- `aws_sns` (Attributes) Set if the resource is provisioned AWS SNS (see [below for nested schema](#nestedatt--aws_sns))
+- `gcp_pubsub` (Attributes) Set if the resource is provisioned by GCP Pub/Sub (see [below for nested schema](#nestedatt--gcp_pubsub))
 
 <a id="nestedatt--aws_sns"></a>
 ### Nested Schema for `aws_sns`
@@ -56,4 +56,4 @@ Read-Only:
 
 Read-Only:
 
-- `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#id) in the form of `projects/{project}/topics/{topic}`
+- `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) in the form of `projects/{project}/topics/{topic}`

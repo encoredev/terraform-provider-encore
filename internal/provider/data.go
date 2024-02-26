@@ -52,11 +52,20 @@ func getAttribute(fieldTyp reflect.Type, desc string) (rtn schema.Attribute, dia
 		if diags.HasError() {
 			return nil, diags
 		}
-		return schema.ListAttribute{
-			ElementType:         attribute.GetType(),
-			Computed:            true,
-			MarkdownDescription: desc,
-		}, nil
+		nestedAttrs, isNested := attribute.(schema.SingleNestedAttribute)
+		if isNested {
+			return schema.ListNestedAttribute{
+				NestedObject:        nestedAttrs.GetNestedObject().(schema.NestedAttributeObject),
+				Computed:            true,
+				MarkdownDescription: desc,
+			}, nil
+		} else {
+			return schema.ListAttribute{
+				ElementType:         attribute.GetType(),
+				Computed:            true,
+				MarkdownDescription: desc,
+			}, nil
+		}
 	case reflect.Struct:
 		attributes, diags := getAttributes(fieldTyp)
 		return schema.SingleNestedAttribute{
@@ -221,7 +230,7 @@ type Need struct {
 	Satisfier  *SatisfierQuery
 }
 
-func NewNeedsData(client *PlatformClient, envName string, ds []func() datasource.DataSource) *NeedsData {
+func NewNeedsData(client PlatformClient, envName string, ds []func() datasource.DataSource) *NeedsData {
 	if envName == "" {
 		envName = "@primary"
 	}
@@ -242,7 +251,7 @@ func NewNeedsData(client *PlatformClient, envName string, ds []func() datasource
 
 type NeedsData struct {
 	needs      map[string]map[TypeRef]map[string]*Need
-	client     *PlatformClient
+	client     PlatformClient
 	defaultEnv string
 	types      []TypeRef
 }
@@ -327,8 +336,8 @@ func (n *NeedsData) envNeeds(ctx context.Context, envName string) (map[TypeRef]m
 			} `graphql:"env(name: $envName)"`
 		} `graphql:"app(slug: $appSlug)"`
 	}
-	err := n.client.gql.Query(ctx, &q, map[string]interface{}{
-		"appSlug": n.client.appSlug,
+	err := n.client.GQL().Query(ctx, &q, map[string]interface{}{
+		"appSlug": n.client.AppSlug(),
 		"envName": envName,
 		"types":   n.types,
 	})

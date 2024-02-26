@@ -37,20 +37,28 @@ type OAuthData struct {
 	AppSlug string        `json:"app_slug"`        // empty if logging in as a user
 }
 
-func NewPlatformClient(version string) *PlatformClient {
+func NewPlatformClient(version string) PlatformClient {
 	baseURL := os.Getenv("ENCORE_API_URL")
 	if baseURL == "" {
 		baseURL = DefaultBaseURL
 	}
-	return &PlatformClient{
+	p := &PlatformClientImpl{
 		baseURL: baseURL,
 		version: version,
 		http:    http.DefaultClient,
-		gql:     graphql.NewClient(baseURL+"/graphql", http.DefaultClient),
 	}
+	p.gql = graphql.NewClient(baseURL+"/graphql", p)
+	return p
 }
 
-type PlatformClient struct {
+type PlatformClient interface {
+	Auth(ctx context.Context, authKey string) error
+	Call(ctx context.Context, method, path string, reqParams, respParams interface{}) error
+	GQL() *graphql.Client
+	AppSlug() string
+}
+
+type PlatformClientImpl struct {
 	baseURL string
 	version string
 	appSlug string
@@ -58,7 +66,15 @@ type PlatformClient struct {
 	gql     *graphql.Client
 }
 
-func (p *PlatformClient) Auth(ctx context.Context, authKey string) error {
+func (p *PlatformClientImpl) AppSlug() string {
+	return p.appSlug
+}
+
+func (p *PlatformClientImpl) GQL() *graphql.Client {
+	return p.gql
+}
+
+func (p *PlatformClientImpl) Auth(ctx context.Context, authKey string) error {
 	var data OAuthData
 	err := p.Call(ctx, "POST", "/login/auth-key", struct {
 		AuthKey string `json:"auth_key"`
@@ -73,13 +89,12 @@ func (p *PlatformClient) Auth(ctx context.Context, authKey string) error {
 	}
 	p.appSlug = data.AppSlug
 	p.http = oauth2.NewClient(ctx, cfg.TokenSource(ctx, data.Token))
-	p.gql = graphql.NewClient(p.baseURL+"/graphql", p.http).WithDebug(true)
 	return nil
 }
 
 // Call makes a call to the API endpoint given by method and path.
 // If reqParams and respParams are non-nil they are JSON-marshalled/unmarshalled.
-func (p *PlatformClient) Call(ctx context.Context, method, path string, reqParams, respParams interface{}) (err error) {
+func (p *PlatformClientImpl) Call(ctx context.Context, method, path string, reqParams, respParams interface{}) (err error) {
 	var body io.Reader
 	if reqParams != nil {
 		reqData, err := json.Marshal(reqParams)
@@ -103,7 +118,7 @@ func (p *PlatformClient) Call(ctx context.Context, method, path string, reqParam
 	return p.parsePlatformResp(resp, respParams)
 }
 
-func (p *PlatformClient) parsePlatformResp(resp *http.Response, respParams interface{}) error {
+func (p *PlatformClientImpl) parsePlatformResp(resp *http.Response, respParams interface{}) error {
 	defer func() {
 		_ = resp.Body.Close()
 	}()
@@ -129,7 +144,7 @@ func (p *PlatformClient) parsePlatformResp(resp *http.Response, respParams inter
 	return nil
 }
 
-func (p *PlatformClient) Do(req *http.Request) (*http.Response, error) {
+func (p *PlatformClientImpl) Do(req *http.Request) (*http.Response, error) {
 	// Add a very limited amount of information for diagnostics
 	req.Header.Set("User-Agent", "EncoreTF/"+p.version)
 	req.Header.Set("X-Encore-Version", p.version)

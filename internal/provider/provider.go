@@ -21,6 +21,8 @@ type EncoreProvider struct {
 	// provider is built and ran locally, and "test" when running acceptance
 	// testing.
 	version string
+
+	clientFactory func(version string) PlatformClient
 }
 
 // EncoreProviderModel describes the provider data model.
@@ -57,7 +59,7 @@ func (p *EncoreProvider) Configure(ctx context.Context, req provider.ConfigureRe
 		return
 	}
 
-	client := NewPlatformClient(p.version)
+	client := p.clientFactory(p.version)
 
 	apiKey := data.APIKey.ValueString()
 	if apiKey == "" {
@@ -97,7 +99,8 @@ func (p *EncoreProvider) DataSources(ctx context.Context) []func() datasource.Da
 func New(version string) func() provider.Provider {
 	return func() provider.Provider {
 		return &EncoreProvider{
-			version: version,
+			version:       version,
+			clientFactory: NewPlatformClient,
 		}
 	}
 }

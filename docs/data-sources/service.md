@@ -25,27 +25,28 @@ Encore provisioned service information
 
 ### Read-Only
 
-- `aws_fargate_task_definition` (Attributes) (see [below for nested schema](#nestedatt--aws_fargate_task_definition))
-- `gcp_cloud_run` (Attributes) (see [below for nested schema](#nestedatt--gcp_cloud_run))
-- `k8s_cluster_ip` (Attributes) (see [below for nested schema](#nestedatt--k8s_cluster_ip))
-- `k8s_deployment` (Attributes) (see [below for nested schema](#nestedatt--k8s_deployment))
+- `aws_fargate_task_definition` (Attributes) The Fargate task definition. Set if the service is an AWS Fargate service (see [below for nested schema](#nestedatt--aws_fargate_task_definition))
+- `gcp_cloud_run` (Attributes) The Cloud Run service. Set if the service is a Google Cloud Run service (see [below for nested schema](#nestedatt--gcp_cloud_run))
+- `k8s_cluster_ip` (Attributes) The cluster IP of the service. Set if the service is a Kubernetes service (see [below for nested schema](#nestedatt--k8s_cluster_ip))
+- `k8s_deployment` (Attributes) The deployment the service is part of (see [below for nested schema](#nestedatt--k8s_deployment))
 
 <a id="nestedatt--aws_fargate_task_definition"></a>
 ### Nested Schema for `aws_fargate_task_definition`
 
 Read-Only:
 
-- `arn` (String)
-- `execution_role` (Attributes) (see [below for nested schema](#nestedatt--aws_fargate_task_definition--execution_role))
-- `service` (Attributes) (see [below for nested schema](#nestedatt--aws_fargate_task_definition--service))
-- `task_role` (Attributes) (see [below for nested schema](#nestedatt--aws_fargate_task_definition--task_role))
+- `arn` (String) The [arn](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the Fargate task definition
+- `execution_role` (Attributes) The execution role of the Fargate task definition (see [below for nested schema](#nestedatt--aws_fargate_task_definition--execution_role))
+- `service` (Attributes) The Fargate service the task definition is associated with (see [below for nested schema](#nestedatt--aws_fargate_task_definition--service))
+- `task_role` (Attributes) The task role of the Fargate task definition (see [below for nested schema](#nestedatt--aws_fargate_task_definition--task_role))
+- `vpc` (Attributes) The VPC the Fargate Service is associated with (see [below for nested schema](#nestedatt--aws_fargate_task_definition--vpc))
 
 <a id="nestedatt--aws_fargate_task_definition--execution_role"></a>
 ### Nested Schema for `aws_fargate_task_definition.execution_role`
 
 Read-Only:
 
-- `arn` (String)
+- `arn` (String) The [arn](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the role
 
 
 <a id="nestedatt--aws_fargate_task_definition--service"></a>
@@ -53,17 +54,17 @@ Read-Only:
 
 Read-Only:
 
-- `arn` (String)
-- `cluster` (Attributes) (see [below for nested schema](#nestedatt--aws_fargate_task_definition--service--cluster))
-- `security_groups` (List of Object) (see [below for nested schema](#nestedatt--aws_fargate_task_definition--service--security_groups))
-- `subnets` (List of Object) (see [below for nested schema](#nestedatt--aws_fargate_task_definition--service--subnets))
+- `arn` (String) The [arn](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the Fargate service
+- `cluster` (Attributes) The Fargate cluster the service is associated with (see [below for nested schema](#nestedatt--aws_fargate_task_definition--service--cluster))
+- `security_groups` (Attributes List) The security groups the Fargate service is associated with (see [below for nested schema](#nestedatt--aws_fargate_task_definition--service--security_groups))
+- `subnets` (Attributes List) The subnets the Fargate service is associated with (see [below for nested schema](#nestedatt--aws_fargate_task_definition--service--subnets))
 
 <a id="nestedatt--aws_fargate_task_definition--service--cluster"></a>
 ### Nested Schema for `aws_fargate_task_definition.service.cluster`
 
 Read-Only:
 
-- `arn` (String)
+- `arn` (String) The [arn](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the Fargate cluster
 
 
 <a id="nestedatt--aws_fargate_task_definition--service--security_groups"></a>
@@ -71,7 +72,7 @@ Read-Only:
 
 Read-Only:
 
-- `id` (String)
+- `id` (String) The [id](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) for the security group
 
 
 <a id="nestedatt--aws_fargate_task_definition--service--subnets"></a>
@@ -79,16 +80,16 @@ Read-Only:
 
 Read-Only:
 
-- `arn` (String)
-- `az` (String)
-- `vpc` (Object) (see [below for nested schema](#nestedobjatt--aws_fargate_task_definition--service--subnets--vpc))
+- `arn` (String) The [ARN](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html) for the subnet
+- `az` (String) The [availability zone](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html) for the subnet
+- `vpc` (Attributes) The [VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) that the subnet is connected to (see [below for nested schema](#nestedatt--aws_fargate_task_definition--service--subnets--vpc))
 
-<a id="nestedobjatt--aws_fargate_task_definition--service--subnets--vpc"></a>
+<a id="nestedatt--aws_fargate_task_definition--service--subnets--vpc"></a>
 ### Nested Schema for `aws_fargate_task_definition.service.subnets.vpc`
 
 Read-Only:
 
-- `id` (String)
+- `id` (String) The [id](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) for the VPC
 
 
 
@@ -98,7 +99,15 @@ Read-Only:
 
 Read-Only:
 
-- `arn` (String)
+- `arn` (String) The [arn](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the role
+
+
+<a id="nestedatt--aws_fargate_task_definition--vpc"></a>
+### Nested Schema for `aws_fargate_task_definition.vpc`
+
+Read-Only:
+
+- `id` (String) The [id](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) for the VPC
 
 
 
@@ -107,16 +116,25 @@ Read-Only:
 
 Read-Only:
 
-- `id` (String)
-- `serverless_vpc_connector` (Attributes) (see [below for nested schema](#nestedatt--gcp_cloud_run--serverless_vpc_connector))
-- `service_account` (Attributes) (see [below for nested schema](#nestedatt--gcp_cloud_run--service_account))
+- `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the Cloud Run service in the form of `projects/{project}/locations/{location}/services/{service}`
+- `serverless_vpc_connector` (Attributes) The serverless VPC connector. Set if the service is a Google Cloud Run service with a serverless VPC connector (see [below for nested schema](#nestedatt--gcp_cloud_run--serverless_vpc_connector))
+- `service_account` (Attributes) The GCP service account of the Cloud Run service (see [below for nested schema](#nestedatt--gcp_cloud_run--service_account))
 
 <a id="nestedatt--gcp_cloud_run--serverless_vpc_connector"></a>
 ### Nested Schema for `gcp_cloud_run.serverless_vpc_connector`
 
 Read-Only:
 
-- `id` (String)
+- `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the serverless VPC connector in the form of `projects/{project}/locations/{location}/connectors/{connector}`
+- `network` (Attributes) (see [below for nested schema](#nestedatt--gcp_cloud_run--serverless_vpc_connector--network))
+
+<a id="nestedatt--gcp_cloud_run--serverless_vpc_connector--network"></a>
+### Nested Schema for `gcp_cloud_run.serverless_vpc_connector.network`
+
+Read-Only:
+
+- `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) in the form of `projects/{project}/global/networks/{network}`
+
 
 
 <a id="nestedatt--gcp_cloud_run--service_account"></a>
@@ -124,7 +142,7 @@ Read-Only:
 
 Read-Only:
 
-- `self_link` (String)
+- `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the service account in the form of `projects/{project}/serviceAccounts/{service_account}`
 
 
 
@@ -133,7 +151,7 @@ Read-Only:
 
 Read-Only:
 
-- `name` (String)
+- `name` (String) The name of the Kubernetes resource
 
 
 <a id="nestedatt--k8s_deployment"></a>
@@ -141,25 +159,71 @@ Read-Only:
 
 Read-Only:
 
-- `name` (String)
-- `namespace` (Attributes) (see [below for nested schema](#nestedatt--k8s_deployment--namespace))
-- `service_account` (Attributes) (see [below for nested schema](#nestedatt--k8s_deployment--service_account))
+- `name` (String) The name of the Kubernetes resource
+- `namespace` (Attributes) The namespace the deployment is part of (see [below for nested schema](#nestedatt--k8s_deployment--namespace))
+- `service_account` (Attributes) The service account of the deployment (see [below for nested schema](#nestedatt--k8s_deployment--service_account))
 
 <a id="nestedatt--k8s_deployment--namespace"></a>
 ### Nested Schema for `k8s_deployment.namespace`
 
 Read-Only:
 
-- `aws_eks` (Attributes) (see [below for nested schema](#nestedatt--k8s_deployment--namespace--aws_eks))
-- `gcp_gke` (Attributes) (see [below for nested schema](#nestedatt--k8s_deployment--namespace--gcp_gke))
-- `name` (String)
+- `aws_eks` (Attributes) The AWS EKS cluster the namespace is part of. Set if the cluster is an AWS EKS cluster (see [below for nested schema](#nestedatt--k8s_deployment--namespace--aws_eks))
+- `gcp_gke` (Attributes) The GCP GKE cluster the namespace is part of. Set if the cluster is a GCP GKE cluster (see [below for nested schema](#nestedatt--k8s_deployment--namespace--gcp_gke))
+- `name` (String) The name of the Kubernetes resource
 
 <a id="nestedatt--k8s_deployment--namespace--aws_eks"></a>
 ### Nested Schema for `k8s_deployment.namespace.aws_eks`
 
 Read-Only:
 
-- `arn` (String)
+- `arn` (String) The [arn](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the EKS cluster
+- `role` (Attributes) The role of the EKS cluster (see [below for nested schema](#nestedatt--k8s_deployment--namespace--aws_eks--role))
+- `security_group` (Attributes) The security group the EKS cluster is part of (see [below for nested schema](#nestedatt--k8s_deployment--namespace--aws_eks--security_group))
+- `subnets` (Attributes List) (see [below for nested schema](#nestedatt--k8s_deployment--namespace--aws_eks--subnets))
+- `vpc` (Attributes) The VPC the EKS cluster is part of (see [below for nested schema](#nestedatt--k8s_deployment--namespace--aws_eks--vpc))
+
+<a id="nestedatt--k8s_deployment--namespace--aws_eks--role"></a>
+### Nested Schema for `k8s_deployment.namespace.aws_eks.vpc`
+
+Read-Only:
+
+- `arn` (String) The [arn](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the role
+
+
+<a id="nestedatt--k8s_deployment--namespace--aws_eks--security_group"></a>
+### Nested Schema for `k8s_deployment.namespace.aws_eks.vpc`
+
+Read-Only:
+
+- `id` (String) The [id](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) for the security group
+
+
+<a id="nestedatt--k8s_deployment--namespace--aws_eks--subnets"></a>
+### Nested Schema for `k8s_deployment.namespace.aws_eks.vpc`
+
+Read-Only:
+
+- `arn` (String) The [ARN](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html) for the subnet
+- `az` (String) The [availability zone](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html) for the subnet
+- `vpc` (Attributes) The [VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) that the subnet is connected to (see [below for nested schema](#nestedatt--k8s_deployment--namespace--aws_eks--vpc--vpc))
+
+<a id="nestedatt--k8s_deployment--namespace--aws_eks--vpc--vpc"></a>
+### Nested Schema for `k8s_deployment.namespace.aws_eks.vpc.vpc`
+
+Read-Only:
+
+- `id` (String) The [id](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) for the VPC
+
+
+
+<a id="nestedatt--k8s_deployment--namespace--aws_eks--vpc"></a>
+### Nested Schema for `k8s_deployment.namespace.aws_eks.vpc`
+
+Read-Only:
+
+- `id` (String) The [id](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) for the VPC
+
 
 
 <a id="nestedatt--k8s_deployment--namespace--gcp_gke"></a>
@@ -167,7 +231,34 @@ Read-Only:
 
 Read-Only:
 
-- `id` (String)
+- `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the GKE cluster in the form of `projects/{project}/locations/{location}/clusters/{cluster}`
+- `network` (Attributes) The network the GKE cluster is part of (see [below for nested schema](#nestedatt--k8s_deployment--namespace--gcp_gke--network))
+- `node_pools` (Attributes List) The node pools of the GKE cluster (see [below for nested schema](#nestedatt--k8s_deployment--namespace--gcp_gke--node_pools))
+- `service_account` (Attributes) The GCP service account of the GKE cluster (see [below for nested schema](#nestedatt--k8s_deployment--namespace--gcp_gke--service_account))
+
+<a id="nestedatt--k8s_deployment--namespace--gcp_gke--network"></a>
+### Nested Schema for `k8s_deployment.namespace.gcp_gke.service_account`
+
+Read-Only:
+
+- `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) in the form of `projects/{project}/global/networks/{network}`
+
+
+<a id="nestedatt--k8s_deployment--namespace--gcp_gke--node_pools"></a>
+### Nested Schema for `k8s_deployment.namespace.gcp_gke.service_account`
+
+Read-Only:
+
+- `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the node pool in the form of `projects/{project}/locations/{location}/clusters/{cluster}/nodePools/{node_pool}`
+
+
+<a id="nestedatt--k8s_deployment--namespace--gcp_gke--service_account"></a>
+### Nested Schema for `k8s_deployment.namespace.gcp_gke.service_account`
+
+Read-Only:
+
+- `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the service account in the form of `projects/{project}/serviceAccounts/{service_account}`
+
 
 
 
@@ -176,16 +267,16 @@ Read-Only:
 
 Read-Only:
 
-- `aws_role` (Attributes) (see [below for nested schema](#nestedatt--k8s_deployment--service_account--aws_role))
-- `gcp_service_account` (Attributes) (see [below for nested schema](#nestedatt--k8s_deployment--service_account--gcp_service_account))
-- `name` (String)
+- `aws_role` (Attributes) The AWS role the K8s service account is mapped to. Set if the workload identity is an AWS role (see [below for nested schema](#nestedatt--k8s_deployment--service_account--aws_role))
+- `gcp_service_account` (Attributes) The GCP service account the K8s service account is mapped to. Set if the workload identity is a GCP service account (see [below for nested schema](#nestedatt--k8s_deployment--service_account--gcp_service_account))
+- `name` (String) The name of the Kubernetes resource
 
 <a id="nestedatt--k8s_deployment--service_account--aws_role"></a>
 ### Nested Schema for `k8s_deployment.service_account.aws_role`
 
 Read-Only:
 
-- `arn` (String)
+- `arn` (String) The [arn](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the role
 
 
 <a id="nestedatt--k8s_deployment--service_account--gcp_service_account"></a>
@@ -193,4 +284,4 @@ Read-Only:
 
 Read-Only:
 
-- `self_link` (String)
+- `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the service account in the form of `projects/{project}/serviceAccounts/{service_account}`

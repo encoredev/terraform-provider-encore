@@ -43,8 +43,8 @@ data "aws_iam_policy_document" "mypolicy" {
 
 ### Read-Only
 
-- `aws_sns` (Attributes) This property is set if the subscription is an AWS SNS subscription (see [below for nested schema](#nestedatt--aws_sns))
-- `gcp_pubsub` (Attributes) This property is set if the subscription is a GCP Pub/Sub subscription (see [below for nested schema](#nestedatt--gcp_pubsub))
+- `aws_sns` (Attributes) Set if the resource is provisioned AWS SNS (see [below for nested schema](#nestedatt--aws_sns))
+- `gcp_pubsub` (Attributes) Set if the resource is provisioned by GCP Pub/Sub (see [below for nested schema](#nestedatt--gcp_pubsub))
 
 <a id="nestedatt--aws_sns"></a>
 ### Nested Schema for `aws_sns`
@@ -87,7 +87,7 @@ Read-Only:
 Read-Only:
 
 - `dead_letter` (Attributes) The dead letter queue for this subscription (see [below for nested schema](#nestedatt--gcp_pubsub--dead_letter))
-- `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#id) in the form of `projects/{project}/subscriptions/{subscription}`
+- `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) in the form of `projects/{project}/subscriptions/{subscription}`
 - `topic` (Attributes) (see [below for nested schema](#nestedatt--gcp_pubsub--topic))
 
 <a id="nestedatt--gcp_pubsub--dead_letter"></a>
@@ -95,7 +95,7 @@ Read-Only:
 
 Read-Only:
 
-- `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#id) in the form of `projects/{project}/subscriptions/{subscription}`
+- `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) in the form of `projects/{project}/subscriptions/{subscription}`
 - `topic` (Attributes) (see [below for nested schema](#nestedatt--gcp_pubsub--dead_letter--topic))
 
 <a id="nestedatt--gcp_pubsub--dead_letter--topic"></a>
@@ -103,7 +103,7 @@ Read-Only:
 
 Read-Only:
 
-- `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#id) in the form of `projects/{project}/topics/{topic}`
+- `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) in the form of `projects/{project}/topics/{topic}`
 
 
 
@@ -112,4 +112,4 @@ Read-Only:
 
 Read-Only:
 
-- `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#id) in the form of `projects/{project}/topics/{topic}`
+- `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) in the form of `projects/{project}/topics/{topic}`

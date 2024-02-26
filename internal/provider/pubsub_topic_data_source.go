@@ -9,13 +9,9 @@ func NewPubSubTopic() datasource.DataSource {
 		"need.Topic",
 		"pubsub_topic",
 		"Encore provisioned Pub/Sub topic information",
-		"PubSubTopic",
+		"GCPPubSubTopic",
+		"AWSSNSTopic",
 	)
-}
-
-type PubSubTopic struct {
-	GcpPubsub GCPPubSubTopic `graphql:"... on GCPPubSubTopic"`
-	AwsSns    AWSSNSTopic    `graphql:"... on AWSSNSTopic"`
 }
 
 type AWSSNSTopic struct {
@@ -34,6 +30,6 @@ type GCPPubSubTopic struct {
 
 func (a *GCPPubSubTopic) GetDocs() (attrDesc map[string]string) {
 	return map[string]string{
-		"id": "The [id](https://cloud.google.com/apis/design/resource_names#id) in the form of `projects/{project}/topics/{topic}`",
+		"id": "The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) in the form of `projects/{project}/topics/{topic}`",
 	}
 }

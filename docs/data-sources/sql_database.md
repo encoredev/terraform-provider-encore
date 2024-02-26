@@ -25,26 +25,26 @@ Encore provisioned database information
 
 ### Read-Only
 
-- `aws_rds` (Attributes) (see [below for nested schema](#nestedatt--aws_rds))
-- `gcp_cloud_sql` (Attributes) (see [below for nested schema](#nestedatt--gcp_cloud_sql))
+- `aws_rds` (Attributes) Set if the database server instance is an AWS RDS instance (see [below for nested schema](#nestedatt--aws_rds))
+- `gcp_cloud_sql` (Attributes) Set if the database server instance is a GCP Cloud SQL instance (see [below for nested schema](#nestedatt--gcp_cloud_sql))
 
 <a id="nestedatt--aws_rds"></a>
 ### Nested Schema for `aws_rds`
 
 Read-Only:
 
-- `arn` (String)
-- `parameter_group` (Attributes) (see [below for nested schema](#nestedatt--aws_rds--parameter_group))
-- `security_group` (Attributes) (see [below for nested schema](#nestedatt--aws_rds--security_group))
-- `subnet_group` (Attributes) (see [below for nested schema](#nestedatt--aws_rds--subnet_group))
-- `vpc` (Attributes) (see [below for nested schema](#nestedatt--aws_rds--vpc))
+- `arn` (String) The [ARN](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html) for the database server instance
+- `parameter_group` (Attributes) The [parameter group](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithParamGroups.html) that the database instance uses (see [below for nested schema](#nestedatt--aws_rds--parameter_group))
+- `security_group` (Attributes) The [security group](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) that the database instance is connected to (see [below for nested schema](#nestedatt--aws_rds--security_group))
+- `subnet_group` (Attributes) The [subnet group](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html) that the database instance is connected to (see [below for nested schema](#nestedatt--aws_rds--subnet_group))
+- `vpc` (Attributes) The [VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) that the database instance is connected to (see [below for nested schema](#nestedatt--aws_rds--vpc))
 
 <a id="nestedatt--aws_rds--parameter_group"></a>
 ### Nested Schema for `aws_rds.parameter_group`
 
 Read-Only:
 
-- `arn` (String)
+- `arn` (String) The [ARN](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html) for the parameter group
 
 
 <a id="nestedatt--aws_rds--security_group"></a>
@@ -52,7 +52,7 @@ Read-Only:
 
 Read-Only:
 
-- `id` (String)
+- `id` (String) The [id](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) for the security group
 
 
 <a id="nestedatt--aws_rds--subnet_group"></a>
@@ -60,24 +60,24 @@ Read-Only:
 
 Read-Only:
 
-- `arn` (String)
-- `subnets` (List of Object) (see [below for nested schema](#nestedatt--aws_rds--subnet_group--subnets))
+- `arn` (String) The [Amazon Resource Name (ARN)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the subnet group
+- `subnets` (Attributes List) The subnets the resource is provisioned in (see [below for nested schema](#nestedatt--aws_rds--subnet_group--subnets))
 
 <a id="nestedatt--aws_rds--subnet_group--subnets"></a>
 ### Nested Schema for `aws_rds.subnet_group.subnets`
 
 Read-Only:
 
-- `arn` (String)
-- `az` (String)
-- `vpc` (Object) (see [below for nested schema](#nestedobjatt--aws_rds--subnet_group--subnets--vpc))
+- `arn` (String) The [ARN](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html) for the subnet
+- `az` (String) The [availability zone](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html) for the subnet
+- `vpc` (Attributes) The [VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) that the subnet is connected to (see [below for nested schema](#nestedatt--aws_rds--subnet_group--subnets--vpc))
 
-<a id="nestedobjatt--aws_rds--subnet_group--subnets--vpc"></a>
+<a id="nestedatt--aws_rds--subnet_group--subnets--vpc"></a>
 ### Nested Schema for `aws_rds.subnet_group.subnets.vpc`
 
 Read-Only:
 
-- `id` (String)
+- `id` (String) The [id](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) for the VPC
 
 
 
@@ -87,7 +87,7 @@ Read-Only:
 
 Read-Only:
 
-- `id` (String)
+- `id` (String) The [id](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) for the VPC
 
 
 
@@ -96,16 +96,16 @@ Read-Only:
 
 Read-Only:
 
-- `id` (String)
-- `network` (Attributes) (see [below for nested schema](#nestedatt--gcp_cloud_sql--network))
-- `ssl_cert` (Attributes) (see [below for nested schema](#nestedatt--gcp_cloud_sql--ssl_cert))
+- `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) in the form of `projects/{project}/instances/{instance}`
+- `network` (Attributes) The [network](https://cloud.google.com/vpc/docs/vpc) that the database instance is connected to (see [below for nested schema](#nestedatt--gcp_cloud_sql--network))
+- `ssl_cert` (Attributes) The [SSL certificate](https://cloud.google.com/sql/docs/mysql/configure-ssl-instance) for the database instance (see [below for nested schema](#nestedatt--gcp_cloud_sql--ssl_cert))
 
 <a id="nestedatt--gcp_cloud_sql--network"></a>
 ### Nested Schema for `gcp_cloud_sql.network`
 
 Read-Only:
 
-- `id` (String)
+- `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) in the form of `projects/{project}/global/networks/{network}`
 
 
 <a id="nestedatt--gcp_cloud_sql--ssl_cert"></a>
@@ -113,4 +113,4 @@ Read-Only:
 
 Read-Only:
 
-- `fingerprint` (String)
+- `fingerprint` (String) The [fingerprint](https://cloud.google.com/sql/docs/mysql/configure-ssl-instance) of the SSL certificate
