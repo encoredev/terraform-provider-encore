@@ -23,6 +23,9 @@
             "encoreName": "todo",
             "satisfier": {
               "__typename": "SQLDatabase",
+              "data": {
+                "name": "todo"
+              },
               "server": {
                 "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
                 "network": {

@@ -313,6 +313,9 @@ func (s *NeedsData) SetValue(ctx context.Context, typRef TypeRef, reqCfg tfsdk.C
 }
 
 func (n *NeedsData) Get(ctx context.Context, typRef TypeRef, envName, encoreName string) (*Need, diag.Diagnostics) {
+	if envName == "" {
+		envName = n.defaultEnv
+	}
 	envNeeds, diags := n.envNeeds(ctx, envName)
 	if diags.HasError() {
 		return nil, diags

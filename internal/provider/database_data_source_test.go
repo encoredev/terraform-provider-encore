@@ -8,6 +8,7 @@ import (
 
 func testAWSRDS() resource.TestCheckFunc {
 	return resource.ComposeAggregateTestCheckFunc(
+		resource.TestCheckResourceAttr("data.encore_sql_database.database", "database_name", "todo"),
 		resource.TestCheckResourceAttr("data.encore_sql_database.database", "aws_rds.arn", "arn:aws:rds:region:account:db"),
 		resource.TestCheckResourceAttr("data.encore_sql_database.database", "aws_rds.vpc.id", "vpc"),
 		resource.TestCheckResourceAttr("data.encore_sql_database.database", "aws_rds.subnet_group.arn", "arn:aws:rds:region:account:subgrp:app-env"),
@@ -20,6 +21,7 @@ func testAWSRDS() resource.TestCheckFunc {
 
 func testGCPCloudSQL() resource.TestCheckFunc {
 	return resource.ComposeAggregateTestCheckFunc(
+		resource.TestCheckResourceAttr("data.encore_sql_database.database", "database_name", "todo"),
 		resource.TestCheckResourceAttr("data.encore_sql_database.database", "gcp_cloud_sql.id", "projects/app-env/regions/northamerica-northeast1/instances/app-env"),
 		resource.TestCheckResourceAttr("data.encore_sql_database.database", "gcp_cloud_sql.network.id", "projects/app-env/global/networks/default"),
 		resource.TestCheckResourceAttr("data.encore_sql_database.database", "gcp_cloud_sql.ssl_cert.fingerprint", "fingerprint"),

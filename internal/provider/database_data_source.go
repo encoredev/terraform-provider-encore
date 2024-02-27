@@ -12,8 +12,19 @@ func NewDatabase() datasource.DataSource {
 		"SQLDatabase")
 }
 
+type SQLDatabaseName struct {
+	Name string `tf:"database_name"`
+}
+
+func (a *SQLDatabaseName) GetDocs() map[string]string {
+	return map[string]string{
+		"database_name": "The name of the database. May be different than the encore resource name",
+	}
+}
+
 type SQLDatabase struct {
-	SQLServer `graphql:"server"`
+	SQLDatabaseName `graphql:"data"`
+	SQLServer       `graphql:"server"`
 }
 
 type SQLServer struct {

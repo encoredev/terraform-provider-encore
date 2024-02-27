@@ -48,6 +48,9 @@
             "encoreName": "todo",
             "satisfier": {
               "__typename": "SQLDatabase",
+              "data": {
+                "name": "todo"
+              },
               "server": {
                 "arn": "arn:aws:rds:region:account:db",
                 "vpc": {
