@@ -3,12 +3,12 @@
 page_title: "encore_pubsub_subscription Data Source - terraform-provider-encore"
 subcategory: ""
 description: |-
-  Data source that provides information about an Encore-managed resource
+  Encore provisioned Pub/Sub Subscription information
 ---
 
 # encore_pubsub_subscription (Data Source)
 
-Data source that provides information about an Encore-managed resource
+Encore provisioned Pub/Sub Subscription information
 
 ## Example Usage
 
@@ -39,16 +39,46 @@ data "aws_iam_policy_document" "mypolicy" {
 
 ### Optional
 
-- `aws_sqs` (Attributes) Encore provisioned SQS Queue information (see [below for nested schema](#nestedatt--aws_sqs))
 - `env` (String) The environment of the Encore resource. Defaults to the provider environment
-- `gcp_pubsub` (Attributes) Encore provisioned PubSub Subscription information (see [below for nested schema](#nestedatt--gcp_pubsub))
 
-<a id="nestedatt--aws_sqs"></a>
-### Nested Schema for `aws_sqs`
+### Read-Only
+
+- `aws_sns` (Attributes) Set if the resource is provisioned AWS SNS (see [below for nested schema](#nestedatt--aws_sns))
+- `gcp_pubsub` (Attributes) Set if the resource is provisioned by GCP Pub/Sub (see [below for nested schema](#nestedatt--gcp_pubsub))
+
+<a id="nestedatt--aws_sns"></a>
+### Nested Schema for `aws_sns`
 
 Read-Only:
 
-- `arn` (String) The [ARN](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html) for this sqs queue
+- `arn` (String) The [ARN](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html) for this resource
+- `queue` (Attributes) The sqs queue which this subscription forwards messages to (see [below for nested schema](#nestedatt--aws_sns--queue))
+- `topic` (Attributes) The topic which this subscription is subscribed to (see [below for nested schema](#nestedatt--aws_sns--topic))
+
+<a id="nestedatt--aws_sns--queue"></a>
+### Nested Schema for `aws_sns.queue`
+
+Read-Only:
+
+- `arn` (String) The [ARN](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html) for this resource
+- `dead_letter` (Attributes) The dead letter queue for this subscription (see [below for nested schema](#nestedatt--aws_sns--queue--dead_letter))
+
+<a id="nestedatt--aws_sns--queue--dead_letter"></a>
+### Nested Schema for `aws_sns.queue.dead_letter`
+
+Read-Only:
+
+- `arn` (String) The [ARN](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html) for this resource
+
+
+
+<a id="nestedatt--aws_sns--topic"></a>
+### Nested Schema for `aws_sns.topic`
+
+Read-Only:
+
+- `arn` (String) The [ARN](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html) for this resource
+
 
 
 <a id="nestedatt--gcp_pubsub"></a>
@@ -56,4 +86,30 @@ Read-Only:
 
 Read-Only:
 
-- `id` (String) The [relative resource name](https://cloud.google.com/apis/design/resource_names#id) for this PubSub subscription in the form of `projects/{project}/subscriptions/{subscription}`
+- `dead_letter` (Attributes) The dead letter queue for this subscription (see [below for nested schema](#nestedatt--gcp_pubsub--dead_letter))
+- `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) in the form of `projects/{project}/subscriptions/{subscription}`
+- `topic` (Attributes) (see [below for nested schema](#nestedatt--gcp_pubsub--topic))
+
+<a id="nestedatt--gcp_pubsub--dead_letter"></a>
+### Nested Schema for `gcp_pubsub.dead_letter`
+
+Read-Only:
+
+- `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) in the form of `projects/{project}/subscriptions/{subscription}`
+- `topic` (Attributes) (see [below for nested schema](#nestedatt--gcp_pubsub--dead_letter--topic))
+
+<a id="nestedatt--gcp_pubsub--dead_letter--topic"></a>
+### Nested Schema for `gcp_pubsub.dead_letter.topic`
+
+Read-Only:
+
+- `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) in the form of `projects/{project}/topics/{topic}`
+
+
+
+<a id="nestedatt--gcp_pubsub--topic"></a>
+### Nested Schema for `gcp_pubsub.topic`
+
+Read-Only:
+
+- `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) in the form of `projects/{project}/topics/{topic}`

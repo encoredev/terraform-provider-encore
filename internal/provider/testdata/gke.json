@@ -1,0 +1,1262 @@
+{
+  "data": {
+    "app": {
+      "env": {
+        "needs": [
+          {
+            "id": "res_16or00pus0nak4albtfg",
+            "typeRef": "need.CacheKeyspace",
+            "encoreName": "cache-cluster",
+            "satisfier": {
+              "__typename": "RedisKeyspace",
+              "cluster": {
+                "selfLink": "projects/app-env/locations/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt10",
+            "typeRef": "need.Database",
+            "encoreName": "todo",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "data": {
+                "name": "todo"
+              },
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt80",
+            "typeRef": "need.Database",
+            "encoreName": "todo1",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt20",
+            "typeRef": "need.Database",
+            "encoreName": "todo2",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt2g",
+            "typeRef": "need.Database",
+            "encoreName": "todo3",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt30",
+            "typeRef": "need.Database",
+            "encoreName": "todo4",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt3g",
+            "typeRef": "need.Database",
+            "encoreName": "todo5",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt40",
+            "typeRef": "need.Database",
+            "encoreName": "todo6",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt4g",
+            "typeRef": "need.Database",
+            "encoreName": "todo7",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt50",
+            "typeRef": "need.Database",
+            "encoreName": "todo8",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt5g",
+            "typeRef": "need.Database",
+            "encoreName": "todo9",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt60",
+            "typeRef": "need.Database",
+            "encoreName": "todo10",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt6g",
+            "typeRef": "need.Database",
+            "encoreName": "todo11",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt70",
+            "typeRef": "need.Database",
+            "encoreName": "todo12",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt7g",
+            "typeRef": "need.Database",
+            "encoreName": "todo13",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albst0",
+            "typeRef": "need.Database",
+            "encoreName": "todo14",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt8g",
+            "typeRef": "need.Database",
+            "encoreName": "todo15",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt90",
+            "typeRef": "need.Database",
+            "encoreName": "todo16",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt9g",
+            "typeRef": "need.Database",
+            "encoreName": "todo17",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albta0",
+            "typeRef": "need.Database",
+            "encoreName": "todo18",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albtag",
+            "typeRef": "need.Database",
+            "encoreName": "todo19",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albtb0",
+            "typeRef": "need.Database",
+            "encoreName": "todo20",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albtbg",
+            "typeRef": "need.Database",
+            "encoreName": "todo21",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albtc0",
+            "typeRef": "need.Database",
+            "encoreName": "todo22",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albssg",
+            "typeRef": "need.Database",
+            "encoreName": "todo23",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt1g",
+            "typeRef": "need.Database",
+            "encoreName": "todo24",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt0g",
+            "typeRef": "need.Database",
+            "encoreName": "todo25",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albt00",
+            "typeRef": "need.Database",
+            "encoreName": "todo26",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albsvg",
+            "typeRef": "need.Database",
+            "encoreName": "todo27",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albsv0",
+            "typeRef": "need.Database",
+            "encoreName": "todo28",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albsug",
+            "typeRef": "need.Database",
+            "encoreName": "todo29",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albsu0",
+            "typeRef": "need.Database",
+            "encoreName": "todo30",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albstg",
+            "typeRef": "need.Database",
+            "encoreName": "database",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "selfLink": "projects/app-env/regions/northamerica-northeast1/instances/app-env",
+                "network": {
+                  "selfLink": "projects/app-env/global/networks/default"
+                },
+                "sslCert": {
+                  "fingerprint": "fingerprint"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albrlg",
+            "typeRef": "need.Gateway",
+            "encoreName": "api-gateway",
+            "satisfier": {
+              "__typename": "Gateway",
+              "compute": {
+                "deployment": {
+                  "data": {
+                    "name": "api-gateway"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "app-env"
+                    },
+                    "cluster": {
+                      "network": {
+                        "selfLink": "projects/app-env/global/networks/default"
+                      },
+                      "serviceAccount": {
+                        "selfLink": "test-service-account"
+                      },
+                      "nodePools": [
+                        {
+                          "selfLink": "test-node-pool"
+                        },
+                        {
+                          "selfLink": "test-node-pool"
+                        }
+                      ],
+                      "selfLink": "projects/app-env/locations/northamerica-northeast1/clusters/app-env"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "api-gateway"
+                    },
+                    "workloadIdentity": {
+                      "selfLink": "projects/app-env/serviceAccounts/api-gateway@app-env.iam.gserviceaccount.com"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "api-gateway"
+                }
+              },
+              "ingress": {
+                "data": {
+                  "name": "res-16or00pus0nak4albtkg-encore-aws-gateway-com"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albrn0",
+            "typeRef": "need.Service",
+            "encoreName": "cron",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "deployment": {
+                  "data": {
+                    "name": "cron"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "app-env"
+                    },
+                    "cluster": {
+                      "network": {
+                        "selfLink": "projects/app-env/global/networks/default"
+                      },
+                      "serviceAccount": {
+                        "selfLink": "test-service-account"
+                      },
+                      "nodePools": [
+                        {
+                          "selfLink": "test-node-pool"
+                        },
+                        {
+                          "selfLink": "test-node-pool"
+                        }
+                      ],
+                      "selfLink": "projects/app-env/locations/northamerica-northeast1/clusters/app-env"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "cron"
+                    },
+                    "workloadIdentity": {
+                      "selfLink": "projects/app-env/serviceAccounts/cron@app-env.iam.gserviceaccount.com"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "cron"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albrpg",
+            "typeRef": "need.Service",
+            "encoreName": "http",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "deployment": {
+                  "data": {
+                    "name": "http"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "app-env"
+                    },
+                    "cluster": {
+                      "network": {
+                        "selfLink": "projects/app-env/global/networks/default"
+                      },
+                      "serviceAccount": {
+                        "selfLink": "test-service-account"
+                      },
+                      "nodePools": [
+                        {
+                          "selfLink": "test-node-pool"
+                        },
+                        {
+                          "selfLink": "test-node-pool"
+                        }
+                      ],
+                      "selfLink": "projects/app-env/locations/northamerica-northeast1/clusters/app-env"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "http"
+                    },
+                    "workloadIdentity": {
+                      "selfLink": "projects/app-env/serviceAccounts/http@app-env.iam.gserviceaccount.com"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "http"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albrq0",
+            "typeRef": "need.Service",
+            "encoreName": "ping",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "deployment": {
+                  "data": {
+                    "name": "ping"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "app-env"
+                    },
+                    "cluster": {
+                      "network": {
+                        "selfLink": "projects/app-env/global/networks/default"
+                      },
+                      "serviceAccount": {
+                        "selfLink": "test-service-account"
+                      },
+                      "nodePools": [
+                        {
+                          "selfLink": "test-node-pool"
+                        },
+                        {
+                          "selfLink": "test-node-pool"
+                        }
+                      ],
+                      "selfLink": "projects/app-env/locations/northamerica-northeast1/clusters/app-env"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "ping"
+                    },
+                    "workloadIdentity": {
+                      "selfLink": "projects/app-env/serviceAccounts/ping@app-env.iam.gserviceaccount.com"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "ping"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albrm0",
+            "typeRef": "need.Service",
+            "encoreName": "cache",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "deployment": {
+                  "data": {
+                    "name": "cache"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "app-env"
+                    },
+                    "cluster": {
+                      "network": {
+                        "selfLink": "projects/app-env/global/networks/default"
+                      },
+                      "serviceAccount": {
+                        "selfLink": "test-service-account"
+                      },
+                      "nodePools": [
+                        {
+                          "selfLink": "test-node-pool"
+                        },
+                        {
+                          "selfLink": "test-node-pool"
+                        }
+                      ],
+                      "selfLink": "projects/app-env/locations/northamerica-northeast1/clusters/app-env"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "cache"
+                    },
+                    "workloadIdentity": {
+                      "selfLink": "projects/app-env/serviceAccounts/cache@app-env.iam.gserviceaccount.com"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "cache"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albro0",
+            "typeRef": "need.Service",
+            "encoreName": "event",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "deployment": {
+                  "data": {
+                    "name": "event"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "app-env"
+                    },
+                    "cluster": {
+                      "network": {
+                        "selfLink": "projects/app-env/global/networks/default"
+                      },
+                      "serviceAccount": {
+                        "selfLink": "test-service-account"
+                      },
+                      "nodePools": [
+                        {
+                          "selfLink": "test-node-pool"
+                        },
+                        {
+                          "selfLink": "test-node-pool"
+                        }
+                      ],
+                      "selfLink": "projects/app-env/locations/northamerica-northeast1/clusters/app-env"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "event"
+                    },
+                    "workloadIdentity": {
+                      "selfLink": "projects/app-env/serviceAccounts/event@app-env.iam.gserviceaccount.com"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "event"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albrmg",
+            "typeRef": "need.Service",
+            "encoreName": "config",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "deployment": {
+                  "data": {
+                    "name": "config"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "app-env"
+                    },
+                    "cluster": {
+                      "network": {
+                        "selfLink": "projects/app-env/global/networks/default"
+                      },
+                      "serviceAccount": {
+                        "selfLink": "test-service-account"
+                      },
+                      "nodePools": [
+                        {
+                          "selfLink": "test-node-pool"
+                        },
+                        {
+                          "selfLink": "test-node-pool"
+                        }
+                      ],
+                      "selfLink": "projects/app-env/locations/northamerica-northeast1/clusters/app-env"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "config"
+                    },
+                    "workloadIdentity": {
+                      "selfLink": "projects/app-env/serviceAccounts/config@app-env.iam.gserviceaccount.com"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "config"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albrp0",
+            "typeRef": "need.Service",
+            "encoreName": "headers",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "deployment": {
+                  "data": {
+                    "name": "headers"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "app-env"
+                    },
+                    "cluster": {
+                      "network": {
+                        "selfLink": "projects/app-env/global/networks/default"
+                      },
+                      "serviceAccount": {
+                        "selfLink": "test-service-account"
+                      },
+                      "nodePools": [
+                        {
+                          "selfLink": "test-node-pool"
+                        },
+                        {
+                          "selfLink": "test-node-pool"
+                        }
+                      ],
+                      "selfLink": "projects/app-env/locations/northamerica-northeast1/clusters/app-env"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "headers"
+                    },
+                    "workloadIdentity": {
+                      "selfLink": "projects/app-env/serviceAccounts/headers@app-env.iam.gserviceaccount.com"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "headers"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albrqg",
+            "typeRef": "need.Service",
+            "encoreName": "runtime",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "deployment": {
+                  "data": {
+                    "name": "runtime"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "app-env"
+                    },
+                    "cluster": {
+                      "network": {
+                        "selfLink": "projects/app-env/global/networks/default"
+                      },
+                      "serviceAccount": {
+                        "selfLink": "test-service-account"
+                      },
+                      "nodePools": [
+                        {
+                          "selfLink": "test-node-pool"
+                        },
+                        {
+                          "selfLink": "test-node-pool"
+                        }
+                      ],
+                      "selfLink": "projects/app-env/locations/northamerica-northeast1/clusters/app-env"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "runtime"
+                    },
+                    "workloadIdentity": {
+                      "selfLink": "projects/app-env/serviceAccounts/runtime@app-env.iam.gserviceaccount.com"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "runtime"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albrr0",
+            "typeRef": "need.Service",
+            "encoreName": "secrets",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "deployment": {
+                  "data": {
+                    "name": "secrets"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "app-env"
+                    },
+                    "cluster": {
+                      "network": {
+                        "selfLink": "projects/app-env/global/networks/default"
+                      },
+                      "serviceAccount": {
+                        "selfLink": "test-service-account"
+                      },
+                      "nodePools": [
+                        {
+                          "selfLink": "test-node-pool"
+                        },
+                        {
+                          "selfLink": "test-node-pool"
+                        }
+                      ],
+                      "selfLink": "projects/app-env/locations/northamerica-northeast1/clusters/app-env"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "secrets"
+                    },
+                    "workloadIdentity": {
+                      "selfLink": "projects/app-env/serviceAccounts/secrets@app-env.iam.gserviceaccount.com"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "secrets"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albrng",
+            "typeRef": "need.Service",
+            "encoreName": "database",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "deployment": {
+                  "data": {
+                    "name": "database"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "app-env"
+                    },
+                    "cluster": {
+                      "network": {
+                        "selfLink": "projects/app-env/global/networks/default"
+                      },
+                      "serviceAccount": {
+                        "selfLink": "test-service-account"
+                      },
+                      "nodePools": [
+                        {
+                          "selfLink": "test-node-pool"
+                        },
+                        {
+                          "selfLink": "test-node-pool"
+                        }
+                      ],
+                      "selfLink": "projects/app-env/locations/northamerica-northeast1/clusters/app-env"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "database"
+                    },
+                    "workloadIdentity": {
+                      "selfLink": "projects/app-env/serviceAccounts/database@app-env.iam.gserviceaccount.com"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "database"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albrog",
+            "typeRef": "need.Service",
+            "encoreName": "features",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "deployment": {
+                  "data": {
+                    "name": "features"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "app-env"
+                    },
+                    "cluster": {
+                      "network": {
+                        "selfLink": "projects/app-env/global/networks/default"
+                      },
+                      "serviceAccount": {
+                        "selfLink": "test-service-account"
+                      },
+                      "nodePools": [
+                        {
+                          "selfLink": "test-node-pool"
+                        },
+                        {
+                          "selfLink": "test-node-pool"
+                        }
+                      ],
+                      "selfLink": "projects/app-env/locations/northamerica-northeast1/clusters/app-env"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "features"
+                    },
+                    "workloadIdentity": {
+                      "selfLink": "projects/app-env/serviceAccounts/features@app-env.iam.gserviceaccount.com"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "features"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albrrg",
+            "typeRef": "need.Service",
+            "encoreName": "server_diff",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "deployment": {
+                  "data": {
+                    "name": "server-diff"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "app-env"
+                    },
+                    "cluster": {
+                      "network": {
+                        "selfLink": "projects/app-env/global/networks/default"
+                      },
+                      "serviceAccount": {
+                        "selfLink": "test-service-account"
+                      },
+                      "nodePools": [
+                        {
+                          "selfLink": "test-node-pool"
+                        },
+                        {
+                          "selfLink": "test-node-pool"
+                        }
+                      ],
+                      "selfLink": "projects/app-env/locations/northamerica-northeast1/clusters/app-env"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "server-diff"
+                    },
+                    "workloadIdentity": {
+                      "selfLink": "projects/app-env/serviceAccounts/server-diff@app-env.iam.gserviceaccount.com"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "server-diff"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albtd0",
+            "typeRef": "need.Topic",
+            "encoreName": "events",
+            "satisfier": {
+              "__typename": "GCPPubSubTopic",
+              "selfLink": "projects/app-env/topics/events"
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albtdg",
+            "typeRef": "need.Subscription",
+            "encoreName": "log-event",
+            "satisfier": {
+              "__typename": "GCPPubSubSubscription",
+              "selfLink": "projects/app-env/subscriptions/events.log-event",
+              "topic": {
+                "selfLink": "projects/app-env/topics/events"
+              },
+              "dlq": {
+                "selfLink": "projects/app-env/subscriptions/events.log-event.deadletter.encore",
+                "topic": {
+                  "selfLink": "projects/app-env/topics/events.log-event.deadletter"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or00pus0nak4albtcg",
+            "typeRef": "need.Topic",
+            "encoreName": "request-events",
+            "satisfier": {
+              "__typename": "GCPPubSubTopic",
+              "selfLink": "projects/app-env/topics/request-events"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

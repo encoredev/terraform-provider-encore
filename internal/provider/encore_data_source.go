@@ -3,28 +3,46 @@ package provider
 import (
 	"context"
 	"fmt"
+	"reflect"
 
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 	"github.com/hashicorp/terraform-plugin-framework/datasource/schema"
 )
 
-type Satisfier struct {
+var queryType = reflect.TypeOf((*SatisfierQuery)(nil)).Elem()
+
+type SatisfierQuery struct {
 	Type string `graphql:"__typename"`
 
-	AWSSQSQueue           `graphql:"... on AWSSQSQueue"`
-	GCPPubSubSubscription `graphql:"... on GCPPubSubSubscription"`
+	AWSSNSSubscription    AWSSNSSubscription    `graphql:"... on AWSSNSSubscription" tf:"aws_sns"`
+	GCPPubSubSubscription GCPPubSubSubscription `graphql:"... on GCPPubSubSubscription" tf:"gcp_pubsub"`
 
-	GCPPubSubTopic `graphql:"... on GCPPubSubTopic"`
-	AWSSNSTopic    `graphql:"... on AWSSNSTopic"`
+	AWSSNSTopic    AWSSNSTopic    `graphql:"... on AWSSNSTopic" tf:"aws_sns"`
+	GCPPubSubTopic GCPPubSubTopic `graphql:"... on GCPPubSubTopic" tf:"gcp_pubsub"`
+
+	SQLDatabase `graphql:"... on SQLDatabase"`
+
+	RedisKeyspace `graphql:"... on RedisKeyspace"`
+
+	Service `graphql:"... on Service"`
+
+	Gateway `graphql:"... on Gateway"`
+}
+
+func (a *SatisfierQuery) GetDocs() (attrDesc map[string]string) {
+	return map[string]string{
+		"gcp_pubsub": "Set if the resource is provisioned by GCP Pub/Sub",
+		"aws_sns":    "Set if the resource is provisioned AWS SNS",
+	}
 }
 
 var _ datasource.DataSource = &EncoreDataSource{}
 
-func NewEncoreDataSource(typeRef TypeRef, name string, tfTypes ...TFType) datasource.DataSource {
+func NewEncoreDataSource(typeRef TypeRef, name, desc string, fragments ...string) datasource.DataSource {
 	return &EncoreDataSource{
 		typeRef: typeRef,
 		name:    name,
-		schema:  createSchema(tfTypes...),
+		schema:  createSchema(desc, fragments...),
 	}
 }
 

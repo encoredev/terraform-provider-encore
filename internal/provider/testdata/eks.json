@@ -1,0 +1,2134 @@
+{
+  "data": {
+    "app": {
+      "env": {
+        "needs": [
+          {
+            "id": "res_16or8j1us0nak4aletgg",
+            "typeRef": "need.CacheKeyspace",
+            "encoreName": "cache-cluster",
+            "satisfier": {
+              "__typename": "RedisKeyspace",
+              "cluster": {
+                "arn": "arn:aws:elasticache:region:account:replicationgroup:app-env-cache-cluster",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:elasticache:region:account:subnetgroup:redis",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:elasticache:region:account:parametergroup:app-env-cache-cluster"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alet2g",
+            "typeRef": "need.Database",
+            "encoreName": "todo",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "data": {
+                "name": "todo"
+              },
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alet9g",
+            "typeRef": "need.Database",
+            "encoreName": "todo1",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alet3g",
+            "typeRef": "need.Database",
+            "encoreName": "todo2",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alet40",
+            "typeRef": "need.Database",
+            "encoreName": "todo3",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alet4g",
+            "typeRef": "need.Database",
+            "encoreName": "todo4",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alet50",
+            "typeRef": "need.Database",
+            "encoreName": "todo5",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alet5g",
+            "typeRef": "need.Database",
+            "encoreName": "todo6",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alet60",
+            "typeRef": "need.Database",
+            "encoreName": "todo7",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alet6g",
+            "typeRef": "need.Database",
+            "encoreName": "todo8",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alet70",
+            "typeRef": "need.Database",
+            "encoreName": "todo9",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alet7g",
+            "typeRef": "need.Database",
+            "encoreName": "todo10",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alet80",
+            "typeRef": "need.Database",
+            "encoreName": "todo11",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alet8g",
+            "typeRef": "need.Database",
+            "encoreName": "todo12",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alet90",
+            "typeRef": "need.Database",
+            "encoreName": "todo13",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alesug",
+            "typeRef": "need.Database",
+            "encoreName": "todo14",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4aleta0",
+            "typeRef": "need.Database",
+            "encoreName": "todo15",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4aletag",
+            "typeRef": "need.Database",
+            "encoreName": "todo16",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4aletb0",
+            "typeRef": "need.Database",
+            "encoreName": "todo17",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4aletbg",
+            "typeRef": "need.Database",
+            "encoreName": "todo18",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4aletc0",
+            "typeRef": "need.Database",
+            "encoreName": "todo19",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4aletcg",
+            "typeRef": "need.Database",
+            "encoreName": "todo20",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4aletd0",
+            "typeRef": "need.Database",
+            "encoreName": "todo21",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4aletdg",
+            "typeRef": "need.Database",
+            "encoreName": "todo22",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4aleso0",
+            "typeRef": "need.Database",
+            "encoreName": "todo23",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alet30",
+            "typeRef": "need.Database",
+            "encoreName": "todo24",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alet20",
+            "typeRef": "need.Database",
+            "encoreName": "todo25",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alet1g",
+            "typeRef": "need.Database",
+            "encoreName": "todo26",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alet10",
+            "typeRef": "need.Database",
+            "encoreName": "todo27",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alet0g",
+            "typeRef": "need.Database",
+            "encoreName": "todo28",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alet00",
+            "typeRef": "need.Database",
+            "encoreName": "todo29",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alesvg",
+            "typeRef": "need.Database",
+            "encoreName": "todo30",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alesv0",
+            "typeRef": "need.Database",
+            "encoreName": "database",
+            "satisfier": {
+              "__typename": "SQLDatabase",
+              "server": {
+                "arn": "arn:aws:rds:region:account:db",
+                "vpc": {
+                  "id": "vpc"
+                },
+                "subnetGroup": {
+                  "arn": "arn:aws:rds:region:account:subgrp:app-env",
+                  "subnets": [
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    },
+                    {
+                      "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                      "az": "us-east-1",
+                      "vpc": {
+                        "id": "vpc"
+                      }
+                    }
+                  ]
+                },
+                "securityGroup": {
+                  "id": "sg"
+                },
+                "parameterGroup": {
+                  "arn": "arn:aws:rds:region:account:pg:rds-instance"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alerb0",
+            "typeRef": "need.Gateway",
+            "encoreName": "api-gateway",
+            "satisfier": {
+              "__typename": "Gateway",
+              "compute": {
+                "deployment": {
+                  "data": {
+                    "name": "api-gateway"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "app-env"
+                    },
+                    "cluster": {
+                      "vpc": {
+                        "id": "vpc"
+                      },
+                      "subnets": [
+                        {
+                          "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                          "az": "us-east-1",
+                          "vpc": {
+                            "id": "vpc"
+                          }
+                        },
+                        {
+                          "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                          "az": "us-east-1",
+                          "vpc": {
+                            "id": "vpc"
+                          }
+                        }
+                      ],
+                      "securityGroup": {
+                        "id": "sg"
+                      },
+                      "role": {
+                        "arn": "arn:aws:iam::account:role/encore/app/env/app-env-cache-task-role"
+                      },
+                      "arn": "arn:aws:eks:region:account:cluster/app-env"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "api-gateway"
+                    },
+                    "workloadIdentity": {
+                      "arn": "arn:aws:iam::account:role/encore/app/env/app-env-api-gateway-task-role"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "api-gateway"
+                }
+              },
+              "ingress": {
+                "data": {
+                  "name": "res"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alercg",
+            "typeRef": "need.Service",
+            "encoreName": "cron",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "deployment": {
+                  "data": {
+                    "name": "cron"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "app-env"
+                    },
+                    "cluster": {
+                      "vpc": {
+                        "id": "vpc"
+                      },
+                      "subnets": [
+                        {
+                          "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                          "az": "us-east-1",
+                          "vpc": {
+                            "id": "vpc"
+                          }
+                        },
+                        {
+                          "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                          "az": "us-east-1",
+                          "vpc": {
+                            "id": "vpc"
+                          }
+                        }
+                      ],
+                      "securityGroup": {
+                        "id": "sg"
+                      },
+                      "role": {
+                        "arn": "arn:aws:iam::account:role/encore/app/env/app-env-cache-task-role"
+                      },
+                      "arn": "arn:aws:eks:region:account:cluster/app-env"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "cron"
+                    },
+                    "workloadIdentity": {
+                      "arn": "arn:aws:iam::account:role/encore/app/env/app-env-cron-task-role"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "cron"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alerf0",
+            "typeRef": "need.Service",
+            "encoreName": "http",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "deployment": {
+                  "data": {
+                    "name": "http"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "app-env"
+                    },
+                    "cluster": {
+                      "vpc": {
+                        "id": "vpc"
+                      },
+                      "subnets": [
+                        {
+                          "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                          "az": "us-east-1",
+                          "vpc": {
+                            "id": "vpc"
+                          }
+                        },
+                        {
+                          "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                          "az": "us-east-1",
+                          "vpc": {
+                            "id": "vpc"
+                          }
+                        }
+                      ],
+                      "securityGroup": {
+                        "id": "sg"
+                      },
+                      "role": {
+                        "arn": "arn:aws:iam::account:role/encore/app/env/app-env-cache-task-role"
+                      },
+                      "arn": "arn:aws:eks:region:account:cluster/app-env"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "http"
+                    },
+                    "workloadIdentity": {
+                      "arn": "arn:aws:iam::account:role/encore/app/env/app-env-http-task-role"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "http"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alerfg",
+            "typeRef": "need.Service",
+            "encoreName": "ping",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "deployment": {
+                  "data": {
+                    "name": "ping"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "app-env"
+                    },
+                    "cluster": {
+                      "vpc": {
+                        "id": "vpc"
+                      },
+                      "subnets": [
+                        {
+                          "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                          "az": "us-east-1",
+                          "vpc": {
+                            "id": "vpc"
+                          }
+                        },
+                        {
+                          "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                          "az": "us-east-1",
+                          "vpc": {
+                            "id": "vpc"
+                          }
+                        }
+                      ],
+                      "securityGroup": {
+                        "id": "sg"
+                      },
+                      "role": {
+                        "arn": "arn:aws:iam::account:role/encore/app/env/app-env-cache-task-role"
+                      },
+                      "arn": "arn:aws:eks:region:account:cluster/app-env"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "ping"
+                    },
+                    "workloadIdentity": {
+                      "arn": "arn:aws:iam::account:role/encore/app/env/app-env-ping-task-role"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "ping"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alerbg",
+            "typeRef": "need.Service",
+            "encoreName": "cache",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "deployment": {
+                  "data": {
+                    "name": "cache"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "app-env"
+                    },
+                    "cluster": {
+                      "vpc": {
+                        "id": "vpc"
+                      },
+                      "subnets": [
+                        {
+                          "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                          "az": "us-east-1",
+                          "vpc": {
+                            "id": "vpc"
+                          }
+                        },
+                        {
+                          "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                          "az": "us-east-1",
+                          "vpc": {
+                            "id": "vpc"
+                          }
+                        }
+                      ],
+                      "securityGroup": {
+                        "id": "sg"
+                      },
+                      "role": {
+                        "arn": "arn:aws:iam::account:role/encore/app/env/app-env-cache-task-role"
+                      },
+                      "arn": "arn:aws:eks:region:account:cluster/app-env"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "cache"
+                    },
+                    "workloadIdentity": {
+                      "arn": "arn:aws:iam::account:role/encore/app/env/app-env-cache-task-role"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "cache"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alerdg",
+            "typeRef": "need.Service",
+            "encoreName": "event",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "deployment": {
+                  "data": {
+                    "name": "event"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "app-env"
+                    },
+                    "cluster": {
+                      "vpc": {
+                        "id": "vpc"
+                      },
+                      "subnets": [
+                        {
+                          "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                          "az": "us-east-1",
+                          "vpc": {
+                            "id": "vpc"
+                          }
+                        },
+                        {
+                          "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                          "az": "us-east-1",
+                          "vpc": {
+                            "id": "vpc"
+                          }
+                        }
+                      ],
+                      "securityGroup": {
+                        "id": "sg"
+                      },
+                      "role": {
+                        "arn": "arn:aws:iam::account:role/encore/app/env/app-env-cache-task-role"
+                      },
+                      "arn": "arn:aws:eks:region:account:cluster/app-env"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "event"
+                    },
+                    "workloadIdentity": {
+                      "arn": "arn:aws:iam::account:role/encore/app/env/app-env-event-task-role"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "event"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alerc0",
+            "typeRef": "need.Service",
+            "encoreName": "config",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "deployment": {
+                  "data": {
+                    "name": "config"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "app-env"
+                    },
+                    "cluster": {
+                      "vpc": {
+                        "id": "vpc"
+                      },
+                      "subnets": [
+                        {
+                          "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                          "az": "us-east-1",
+                          "vpc": {
+                            "id": "vpc"
+                          }
+                        },
+                        {
+                          "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                          "az": "us-east-1",
+                          "vpc": {
+                            "id": "vpc"
+                          }
+                        }
+                      ],
+                      "securityGroup": {
+                        "id": "sg"
+                      },
+                      "role": {
+                        "arn": "arn:aws:iam::account:role/encore/app/env/app-env-cache-task-role"
+                      },
+                      "arn": "arn:aws:eks:region:account:cluster/app-env"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "config"
+                    },
+                    "workloadIdentity": {
+                      "arn": "arn:aws:iam::account:role/encore/app/env/app-env-config-task-role"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "config"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alereg",
+            "typeRef": "need.Service",
+            "encoreName": "headers",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "deployment": {
+                  "data": {
+                    "name": "headers"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "app-env"
+                    },
+                    "cluster": {
+                      "vpc": {
+                        "id": "vpc"
+                      },
+                      "subnets": [
+                        {
+                          "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                          "az": "us-east-1",
+                          "vpc": {
+                            "id": "vpc"
+                          }
+                        },
+                        {
+                          "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                          "az": "us-east-1",
+                          "vpc": {
+                            "id": "vpc"
+                          }
+                        }
+                      ],
+                      "securityGroup": {
+                        "id": "sg"
+                      },
+                      "role": {
+                        "arn": "arn:aws:iam::account:role/encore/app/env/app-env-cache-task-role"
+                      },
+                      "arn": "arn:aws:eks:region:account:cluster/app-env"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "headers"
+                    },
+                    "workloadIdentity": {
+                      "arn": "arn:aws:iam::account:role/encore/app/env/app-env-headers-task-role"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "headers"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alerg0",
+            "typeRef": "need.Service",
+            "encoreName": "runtime",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "deployment": {
+                  "data": {
+                    "name": "runtime"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "app-env"
+                    },
+                    "cluster": {
+                      "vpc": {
+                        "id": "vpc"
+                      },
+                      "subnets": [
+                        {
+                          "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                          "az": "us-east-1",
+                          "vpc": {
+                            "id": "vpc"
+                          }
+                        },
+                        {
+                          "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                          "az": "us-east-1",
+                          "vpc": {
+                            "id": "vpc"
+                          }
+                        }
+                      ],
+                      "securityGroup": {
+                        "id": "sg"
+                      },
+                      "role": {
+                        "arn": "arn:aws:iam::account:role/encore/app/env/app-env-cache-task-role"
+                      },
+                      "arn": "arn:aws:eks:region:account:cluster/app-env"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "runtime"
+                    },
+                    "workloadIdentity": {
+                      "arn": "arn:aws:iam::account:role/encore/app/env/app-env-runtime-task-role"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "runtime"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alergg",
+            "typeRef": "need.Service",
+            "encoreName": "secrets",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "deployment": {
+                  "data": {
+                    "name": "secrets"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "app-env"
+                    },
+                    "cluster": {
+                      "vpc": {
+                        "id": "vpc"
+                      },
+                      "subnets": [
+                        {
+                          "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                          "az": "us-east-1",
+                          "vpc": {
+                            "id": "vpc"
+                          }
+                        },
+                        {
+                          "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                          "az": "us-east-1",
+                          "vpc": {
+                            "id": "vpc"
+                          }
+                        }
+                      ],
+                      "securityGroup": {
+                        "id": "sg"
+                      },
+                      "role": {
+                        "arn": "arn:aws:iam::account:role/encore/app/env/app-env-cache-task-role"
+                      },
+                      "arn": "arn:aws:eks:region:account:cluster/app-env"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "secrets"
+                    },
+                    "workloadIdentity": {
+                      "arn": "arn:aws:iam::account:role/encore/app/env/app-env-secrets-task-role"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "secrets"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alerd0",
+            "typeRef": "need.Service",
+            "encoreName": "database",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "deployment": {
+                  "data": {
+                    "name": "database"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "app-env"
+                    },
+                    "cluster": {
+                      "vpc": {
+                        "id": "vpc"
+                      },
+                      "subnets": [
+                        {
+                          "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                          "az": "us-east-1",
+                          "vpc": {
+                            "id": "vpc"
+                          }
+                        },
+                        {
+                          "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                          "az": "us-east-1",
+                          "vpc": {
+                            "id": "vpc"
+                          }
+                        }
+                      ],
+                      "securityGroup": {
+                        "id": "sg"
+                      },
+                      "role": {
+                        "arn": "arn:aws:iam::account:role/encore/app/env/app-env-cache-task-role"
+                      },
+                      "arn": "arn:aws:eks:region:account:cluster/app-env"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "database"
+                    },
+                    "workloadIdentity": {
+                      "arn": "arn:aws:iam::account:role/encore/app/env/app-env-database-task-role"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "database"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alere0",
+            "typeRef": "need.Service",
+            "encoreName": "features",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "deployment": {
+                  "data": {
+                    "name": "features"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "app-env"
+                    },
+                    "cluster": {
+                      "vpc": {
+                        "id": "vpc"
+                      },
+                      "subnets": [
+                        {
+                          "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                          "az": "us-east-1",
+                          "vpc": {
+                            "id": "vpc"
+                          }
+                        },
+                        {
+                          "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                          "az": "us-east-1",
+                          "vpc": {
+                            "id": "vpc"
+                          }
+                        }
+                      ],
+                      "securityGroup": {
+                        "id": "sg"
+                      },
+                      "role": {
+                        "arn": "arn:aws:iam::account:role/encore/app/env/app-env-cache-task-role"
+                      },
+                      "arn": "arn:aws:eks:region:account:cluster/app-env"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "features"
+                    },
+                    "workloadIdentity": {
+                      "arn": "arn:aws:iam::account:role/encore/app/env/app-env-features-task-role"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "features"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alerh0",
+            "typeRef": "need.Service",
+            "encoreName": "server_diff",
+            "satisfier": {
+              "__typename": "Service",
+              "compute": {
+                "deployment": {
+                  "data": {
+                    "name": "server-diff"
+                  },
+                  "namespace": {
+                    "data": {
+                      "name": "app-env"
+                    },
+                    "cluster": {
+                      "vpc": {
+                        "id": "vpc"
+                      },
+                      "subnets": [
+                        {
+                          "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                          "az": "us-east-1",
+                          "vpc": {
+                            "id": "vpc"
+                          }
+                        },
+                        {
+                          "arn": "arn:aws:ec2:region:account:subnet/subnet",
+                          "az": "us-east-1",
+                          "vpc": {
+                            "id": "vpc"
+                          }
+                        }
+                      ],
+                      "securityGroup": {
+                        "id": "sg"
+                      },
+                      "role": {
+                        "arn": "arn:aws:iam::account:role/encore/app/env/app-env-cache-task-role"
+                      },
+                      "arn": "arn:aws:eks:region:account:cluster/app-env"
+                    }
+                  },
+                  "serviceAccount": {
+                    "data": {
+                      "name": "server-diff"
+                    },
+                    "workloadIdentity": {
+                      "arn": "arn:aws:iam::account:role/encore/app/env/app-env-server-diff-task-role"
+                    }
+                  }
+                }
+              },
+              "route": {
+                "data": {
+                  "name": "server-diff"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4aleteg",
+            "typeRef": "need.Topic",
+            "encoreName": "events",
+            "satisfier": {
+              "__typename": "AWSSNSTopic",
+              "arn": "arn:aws:sns:region:account:app-env-events"
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4aletf0",
+            "typeRef": "need.Subscription",
+            "encoreName": "log-event",
+            "satisfier": {
+              "__typename": "AWSSNSSubscription",
+              "arn": "arn:aws:sns:region:account:app-env-events",
+              "topic": {
+                "arn": "arn:aws:sns:region:account:app-env-events"
+              },
+              "queue": {
+                "arn": "arn:aws:sqs:region:account:app-env-events-log-event",
+                "dlq": {
+                  "arn": "arn:aws:sqs:region:account:app-env-events-log-event-dlq"
+                }
+              }
+            }
+          },
+          {
+            "id": "res_16or8j1us0nak4alete0",
+            "typeRef": "need.Topic",
+            "encoreName": "request-events",
+            "satisfier": {
+              "__typename": "AWSSNSTopic",
+              "arn": "arn:aws:sns:region:account:app-env-request-events"
+            }
+          }
+        ]
+      }
+    }
+  }
+}
