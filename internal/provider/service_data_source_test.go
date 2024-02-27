@@ -11,10 +11,10 @@ func testAWSFargateService(res string) resource.TestCheckFunc {
 		resource.TestCheckResourceAttr(res, "aws_fargate_task_definition.arn", "arn:aws:ecs:region:account:task-definition/app-env-encore"),
 		resource.TestCheckResourceAttr(res, "aws_fargate_task_definition.service.arn", "arn:aws:ecs:region:account:service/app-env/encore"),
 		resource.TestCheckResourceAttr(res, "aws_fargate_task_definition.service.cluster.arn", "arn:aws:ecs:region:account:cluster/app-env"),
-		testAWSSubnets(res, "aws_fargate_task_definition.service"),
 		resource.TestCheckResourceAttr(res, "aws_fargate_task_definition.service.security_groups.0.id", "sg"),
 		resource.TestCheckResourceAttr(res, "aws_fargate_task_definition.task_role.arn", "arn:aws:iam::account:role/encore/app/env/app-env-encore-task-role"),
 		resource.TestCheckResourceAttr(res, "aws_fargate_task_definition.execution_role.arn", "arn:aws:iam::account:role/encore/app/env/app-env-encore-execution-role"),
+		testAWSSubnets(res, "aws_fargate_task_definition.service"),
 	)
 }
 
