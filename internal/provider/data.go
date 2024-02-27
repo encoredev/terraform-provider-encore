@@ -54,8 +54,13 @@ func getAttribute(fieldTyp reflect.Type, desc string) (rtn schema.Attribute, dia
 		}
 		nestedAttrs, isNested := attribute.(schema.SingleNestedAttribute)
 		if isNested {
+			nestedObject, ok := nestedAttrs.GetNestedObject().(schema.NestedAttributeObject)
+			if !ok {
+				diags.AddError("Unsupported Type", fmt.Sprintf("unsupported type %s", fieldTyp))
+				return nil, diags
+			}
 			return schema.ListNestedAttribute{
-				NestedObject:        nestedAttrs.GetNestedObject().(schema.NestedAttributeObject),
+				NestedObject:        nestedObject,
 				Computed:            true,
 				MarkdownDescription: desc,
 			}, nil
@@ -97,7 +102,10 @@ func getAttributes(typ reflect.Type, fragmentFilter ...string) (rtn map[string]s
 	}
 	attDocs := map[string]string{}
 	if reflect.PointerTo(typ).Implements(tfType) {
-		attDocs = reflect.New(typ).Interface().(TerraformDescription).GetDocs()
+		description, ok := reflect.New(typ).Interface().(TerraformDescription)
+		if ok {
+			attDocs = description.GetDocs()
+		}
 	}
 
 	rtn = make(map[string]schema.Attribute)
