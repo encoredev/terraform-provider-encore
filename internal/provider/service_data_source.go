@@ -44,12 +44,14 @@ type GCPCloudRun struct {
 	SelfLink               string                    `tf:"id"`
 	ServerlessVpcConnector GCPServerlessVpcConnector `graphql:"serverlessVPCConnector"`
 	ServiceAccount         GCPServiceAccount
+	Subnet                 GCPSubnet
 }
 
 func (a *GCPCloudRun) GetDocs() map[string]string {
 	return map[string]string{
 		"id":                       "The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the Cloud Run service in the form of `projects/{project}/locations/{location}/services/{service}`",
 		"serverless_vpc_connector": "The serverless VPC connector. Set if the service is a Google Cloud Run service with a serverless VPC connector",
+		"subnet":                   "The subnet the Cloud Run service is associated with. Set if the service is a Google Cloud Run service with Direct VPC Access",
 		"service_account":          "The GCP service account of the Cloud Run service",
 	}
 }

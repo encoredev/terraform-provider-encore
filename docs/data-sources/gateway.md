@@ -206,6 +206,7 @@ Read-Only:
 - `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the Cloud Run service in the form of `projects/{project}/locations/{location}/services/{service}`
 - `serverless_vpc_connector` (Attributes) The serverless VPC connector. Set if the service is a Google Cloud Run service with a serverless VPC connector (see [below for nested schema](#nestedatt--gcp_cloud_run--serverless_vpc_connector))
 - `service_account` (Attributes) The GCP service account of the Cloud Run service (see [below for nested schema](#nestedatt--gcp_cloud_run--service_account))
+- `subnet` (Attributes) The subnet the Cloud Run service is associated with. Set if the service is a Google Cloud Run service with Direct VPC Access (see [below for nested schema](#nestedatt--gcp_cloud_run--subnet))
 
 <a id="nestedatt--gcp_cloud_run--serverless_vpc_connector"></a>
 ### Nested Schema for `gcp_cloud_run.serverless_vpc_connector`
@@ -230,6 +231,23 @@ Read-Only:
 Read-Only:
 
 - `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the service account in the form of `projects/{project}/serviceAccounts/{service_account}`
+
+
+<a id="nestedatt--gcp_cloud_run--subnet"></a>
+### Nested Schema for `gcp_cloud_run.subnet`
+
+Read-Only:
+
+- `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the subnet in the form of `projects/{project}/locations/{location}/subnetworks/{subnet}`
+- `network` (Attributes) (see [below for nested schema](#nestedatt--gcp_cloud_run--subnet--network))
+
+<a id="nestedatt--gcp_cloud_run--subnet--network"></a>
+### Nested Schema for `gcp_cloud_run.subnet.network`
+
+Read-Only:
+
+- `id` (String) The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) in the form of `projects/{project}/global/networks/{network}`
+
 
 
 
