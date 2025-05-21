@@ -73,6 +73,17 @@ func (a *GCPNetwork) GetDocs() map[string]string {
 	}
 }
 
+type GCPSubnet struct {
+	SelfLink string `tf:"id"`
+	Network  GCPNetwork
+}
+
+func (a *GCPSubnet) GetDocs() map[string]string {
+	return map[string]string{
+		"id": "The [id](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the subnet in the form of `projects/{project}/locations/{location}/subnetworks/{subnet}`",
+	}
+}
+
 type AWSSQLServer struct {
 	Arn            string
 	VPC            AWSVPC
